@@ -12,11 +12,117 @@ h1, p, body {
     margin: 0;
 }
 
-.hidiv {
-    width: 100%;
-    height: 90%;
+ul {
+    padding: 0;
+    margin: 0;
 }
 
-.portpic {
+li {
+    list-style: none;
+}
+
+.headerSection {
+    width: 100%;
+    height: 100%;
+    background-image: url(http://i.imgur.com/5yWGixH.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50%;
+    position: relative;
+    text-align: right;
+}
+
+.hidiv {
+    position: relative;
+    right: 5%;
+    top: 30%;
     width: 300px;
+    height: 300px;
+    margin: 0;
+    display: inline-block;
+    text-align: center;
+}
+
+.hi {
+    margin-bottom: 20px;
+}
+
+.aboutMeSection {
+    text-align: center;
+}
+
+.aboutMeDiv {
+    display: inline-block;
+    text-align: center;
+    width: 60%;
+    padding: 10px;
+}
+
+.aboutMeHeader {
+    padding-bottom: 10px;
+}
+
+.aboutMeP {
+    padding-bottom: 10px;
+}
+
+.portfolioSection {
+    background-color: black;
+    color: white;
+}
+
+.listOfPortfolioPieces {
+    text-align: center;
+}
+
+.portfolioSectionHeader {
+    text-align: center;
+    padding: 20px 0px 30px;
+}
+
+.portfolioPiece {
+    display: inline-block;
+    width: 80%;
+}
+
+.piecePic, .pieceDescription {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+.pieceTitle {
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.firstMemoriesTitle {
+    color: #ecc287;
+}
+
+.dinnerPlansTitle {
+    color: #9a4e2a;
+}
+
+.concertFinderTitle {
+    color: #861686;
+}
+
+.pieceDescription {
+    width: 500px;
+}
+
+.descriptionP {
+    line-height: 22px;
+}
+
+.projectPics {
+    width: 400px;
+}
+
+.otherResourceLink {
+    text-decoration: none;
+    color: white;
+    border-bottom: 3px solid #3737ff;
 }
