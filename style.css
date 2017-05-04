@@ -50,6 +50,7 @@ li {
 
 .aboutMeSection {
     text-align: center;
+    height: auto;
 }
 
 .aboutMeDiv {
@@ -57,6 +58,7 @@ li {
     text-align: center;
     width: 60%;
     padding: 10px;
+    margin: 55px auto 55px;
 }
 
 .aboutMeHeader {
@@ -67,6 +69,15 @@ li {
     padding-bottom: 10px;
 }
 
+@media only screen and (max-width:900px) {
+    .aboutMeDiv {
+        top: 10px;
+        width: 90%;
+    }
+
+
+}
+
 .portfolioSection {
     background-color: black;
     color: white;
@@ -74,6 +85,7 @@ li {
 
 .listOfPortfolioPieces {
     text-align: center;
+    padding-bottom: 20px;
 }
 
 .portfolioSectionHeader {
@@ -110,7 +122,7 @@ li {
 }
 
 .pieceDescription {
-    width: 500px;
+    max-width: 500px;
 }
 
 .descriptionP {
@@ -118,7 +130,8 @@ li {
 }
 
 .projectPics {
-    width: 400px;
+    max-width: 400px;
+    width: 100%;
 }
 
 .otherResourceLink {
@@ -127,10 +140,35 @@ li {
     border-bottom: 3px solid #3737ff;
 }
 
+.technologySectionMobile {
+    display: none;
+}
+
 .technologySectionDesktop {
     width: 100%;
     height: 100%;
     position: relative;
-    background-color: blue;
+    background-color: #9494ff;
 }
 
+@media only screen and (max-width: 800px) {
+    .technologySectionMobile {
+        display: block;
+    }
+}
+
+
+.react {
+    height: 100px;
+    background-image: url(https://image.ibb.co/drPaGQ/cdn_worldvectorlogo_com.png);
+    transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.react:hover {
+    background-image: url(https://image.ibb.co/e9jswQ/addthis_react_flux_javascript_scaling.png);
+}
