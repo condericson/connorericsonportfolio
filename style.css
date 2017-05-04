@@ -140,9 +140,9 @@ li {
     border-bottom: 3px solid #3737ff;
 }
 
-.technologySectionMobile {
+/*.technologySectionMobile {
     display: none;
-}
+}*/
 
 .technologySectionDesktop {
     width: 100%;
@@ -158,7 +158,9 @@ li {
 }
 
 
-.react {
+/*Technologies*/
+
+.reactDiv {
     height: 100px;
     background-image: url(https://image.ibb.co/n8bdmQ/Optimized_react_logo.jpg);
     transition: all .2s ease;
@@ -169,6 +171,22 @@ li {
     background-size: contain;
     background-repeat: no-repeat;
 }
-.react:hover {
-    background-image: url(https://image.ibb.co/e9jswQ/addthis_react_flux_javascript_scaling.png);
+.reactDiv:hover {
+    background-image: url(http://image.ibb.co/mbi8mQ/react_logo_small.png);
+}
+
+.reduxDiv {
+    height: 100px;
+    background-image: url(http://image.ibb.co/fDr5GQ/logo.png);
+    transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.reduxDiv:hover {
+    background-image: url(http://image.ibb.co/fPMuAk/logo_title_dark.png);
 }
