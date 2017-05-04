@@ -149,40 +149,52 @@ li {
     background-color: white;
 }
 
-.mepic {
-    display: none;
-}
 
 
 
 /*Technologies*/
 /*Mobile CSS*/
+
+.listItem {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
 .circleTechs {
     height: 100px;
     width: 100px;
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
-    position: absolute;
+    display: inline-block;
 }
+
+
 
 .circleTechs > a {
     display: inline-block;
     height: 100%;
     width: 100%;
-    position: absolute;
 }
 
 .frontendTechs, .backendTechs, .testingTechs {
-    position: relative;
+    /*position: relative;*/
 }
 
-.frontendTechHeader {
+.frontendTechHeader, .backendTechHeader, .testingTechHeader {
     display: inline-block;
     width: 100%;
-    position: absolute;
-    top: 200px;
     text-align: center;
+    padding: 20px 0px 10px;
+}
+
+.headerUnderline {
+    border-bottom: 1px solid blue;
+}
+
+.headerUnderline {
+    border-bottom: 1px solid blue;
 }
 
 .htmlDiv {
@@ -222,7 +234,7 @@ li {
 
 .reactDiv {
     height: 100px;
-    background-image: url(https://image.ibb.co/n8bdmQ/Optimized_react_logo.jpg);
+    background-image: url(http://image.ibb.co/kJ5Kt5/react_logo_white.jpg);
     transition: all .2s ease;
     -webkit-transition: all .2s ease;
     -ms-transition: all .2s ease;
@@ -230,14 +242,11 @@ li {
     -o-transition: all .2s ease;
     background-size: contain;
     background-repeat: no-repeat;
-}
-.reactDiv:hover {
-    background-image: url(http://image.ibb.co/mbi8mQ/react_logo_small.png);
 }
 
 .reduxDiv {
     height: 100px;
-    background-image: url(http://image.ibb.co/idJ0i5/reduxsmall.jpg);
+    background-image: url(http://image.ibb.co/cfeLY5/redux_logo_9_CA6836_C12_seeklogo_com.png);
     transition: all .2s ease;
     -webkit-transition: all .2s ease;
     -ms-transition: all .2s ease;
@@ -247,9 +256,6 @@ li {
     background-repeat: no-repeat;
 }
 
-.reduxDiv:hover {
-    background-image: url(http://image.ibb.co/b2nnVk/reduxlarge.jpg);
-}
 
 .mochaDiv {
     background-image: url(http://image.ibb.co/bOs4Ak/mocha.png);
@@ -261,12 +267,5 @@ li {
 
 /*Desktop CSS*/
 @media only screen and (min-width: 800px) {
-    .mepic {
-        background-image: url(http://image.ibb.co/eC1gqk/3_1.jpg);
-        height: 200px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        cursor: pointer;
-        display: block;
-}
+    
 }
