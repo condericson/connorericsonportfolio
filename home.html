@@ -7,11 +7,12 @@
     <title>Connor Ericson</title>
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 </head>
 <body>
     <nav></nav>
-    <div class="headerSection">
-        <div class="hidiv">
+    <div class="animated openingSection">
+        <div class="openingHeader hidiv">
             <h1 class="hi">Hi, I'm Connor!</h1>
             <div class="introp">
                 <p class="introp1">I'm a full stack developer,</p>
@@ -20,97 +21,111 @@
             </div>
         </div>
     </div>
+    <div class="fullsite">
+        <div class="headerSection">
+            <div class="hidiv">
+                <h1 class="hi">Hi, I'm Connor!</h1>
+                <div class="introp">
+                    <p class="introp1">I'm a full stack developer,</p>
+                    <p class="introp2">UX/UI focused,</p>
+                    <p class="introp3">with a passion for people.</p>
+                </div>
+            </div>
+        </div>
 
-    <div class="aboutMeSection">
-        <div class="aboutMeDiv">
-            <h1 class="aboutMeHeader">Passion</h1>
-            <p class="aboutMeP">Coding has always been a hobbie of mine, in the last year its become a passion. The ability to create beautiful UI's from scratch and to provide unique experiences for users is what I love about programming. Despite the successes of my projects, I always strive to improve upon my previous work. The possibilities of what programming can do for people, large or small scale, is limitless, as is my drive to create life-changing applications.</p>
+        <div class="aboutMeSection">
+            <div class="aboutMeDiv">
+                <h1 class="aboutMeHeader">Passion</h1>
+                <p class="aboutMeP">Coding has always been a hobbie of mine, in the last year its become a passion. The ability to create beautiful UI's from scratch and to provide unique experiences for users is what I love about programming. Despite the successes of my projects, I always strive to improve upon my previous work. The possibilities of what programming can do for people, large or small scale, is limitless, as is my drive to create life-changing applications.</p>
+            </div>
+            
         </div>
         
+        
+
+        <div class="portfolioSection">
+            <h1 class="portfolioSectionHeader">Projects:</h1>
+            <ul class="listOfPortfolioPieces">
+                <li class="portfolioPiece">
+                    <div class="piecePic">
+                        <a href="https://github.com/condericson/babysfirst"><img class="projectPics" src="http://i.imgur.com/GXgZ0su.png" alt="First Memories"></a>
+                    </div>
+                    <div class="firstmemoriesdescriptiondiv pieceDescription">
+                        <p class="firstmemoriesdescription descriptionP"><a class="pieceTitle firstMemoriesTitle" href="https://github.com/condericson/babysfirst">First Memories</a> is a online journaling application for parents that want a way to record pictures and journal entries about their child from anywhere. This application uses a React/Redux framework to display user provided journal entries stored with MongoDB using Node.js and stores images with the image cloud service, <a class="otherResourceLink" href="http://cloudinary.com">Cloudinary</a></p>
+                    </div>
+                <li class="portfolioPiece">
+                    <div class="piecePic evenPic">
+                        <a href="https://dinnerplans-condericson.herokuapp.com/"><img class="projectPics" src="http://i.imgur.com/Nsj22L3.png" alt="Dinner Plans"></a>
+                    </div>
+                    <div class="dinnerplansdescriptiondiv pieceDescription">
+                        <p class="dinnerplansdescriptionp descriptionP"><a class="pieceTitle dinnerPlansTitle" href="https://dinnerplans-condericson.herokuapp.com/">Dinner Plans</a> is a meal preparation application designed to assist with organizing meals on a weekly basis, provide search results using keywords from <a class="otherResourceLink" href="http://www.yummly.com/">Yummly</a>'s API for recipes that can be added to the weekly view, to allow users to upload their own recipes to the weekly view, and to create a grocery list using the ingredients of the recipes in the week for ease of shopping. This application uses Javascript and jQuery on the front end and stores recipes provided or selected by the user in a MongoDB with Node.js</p>
+                    </div>
+                <li class="portfolioPiece">
+                    <div class="piecePic">
+                        <a href="https://condericson.github.io/concertfinder/"><img class="projectPics" src="http://i.imgur.com/8IbdD01.png" alt="Concert Finder"></a>
+                    </div>
+                    <div class="concertfinderdescriptiondiv pieceDescription">
+                        <p class="concertfinderdescriptionp descriptionP"><a class="pieceTitle concertFinderTitle" href="https://condericson.github.io/concertfinder/">Concert Finder</a> is a application made to query <a class="otherResourceLink" href="https://seatgeek.com/">Seat Geek</a>'s API and display search results based on user input for concerts by artist. Additionally, once found, the user can click to display a map provided by a <a class="otherResourceLink" href="https://developers.google.com/maps/">Google Maps</a> API query. This application, the first application I ever created, uses HTML, CSS,  Javascript, and jQuery.</p>
+                    </div>
+            </ul>
+        </div>
+
+        <div class="technologySection">
+            <h1>Technologies:</h1>
+            <p><span class="click">Click</span><span class="tap">Tap</span> to learn more!</p>
+            <ul class="frontendTechs">
+                <h1 class="frontendTechHeader"><span class="headerUnderlineFrontEnd">Front End</span></h1>
+                <li class="listItem">
+                    <div class="htmlDiv technologies"><a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"></a></div>
+                    <div class="cssDiv technologies"><a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank"></a></div>
+                </li>
+                <li class="listItem">
+                    <div class="javascriptDiv technologies"><a href="https://www.javascript.com/" target="_blank"></a></div>
+                    <div class="jqueryDiv technologies"><a href="https://jquery.com/" target="_blank"></a></div> 
+                </li>  
+                <li class="listItem">
+                    <div class="reactDiv technologies"><a href="https://facebook.github.io/react/" target="_blank"></a></div>
+                    <div class="reduxDiv technologies"><a href="http://redux.js.org/" target="_blank"></a></div>
+                </li>
+            </ul>
+            <ul class="backendTechs">
+                <h1 class="backendTechHeader"><span class="headerUnderlineBackEnd">Back End</span></h1>
+                <li class="listItem">
+                    <div class="nodejsDiv technologies"><a href="https://nodejs.org/" target="_blank"></a></div>
+                    <div class="npmDiv technologies"><a href="https://www.npmjs.com/" target="_blank"></a></div>
+                </li>
+                <li class="listItem">
+                    <div class="mongodbDiv technologies"><a href="https://www.mongodb.com/" target="_blank"></a></div>            
+                </li>
+                <li class="listItem">
+                    <div class="mochaDiv technologies"><a href="https://mochajs.org/" target="_blank"></a></div>
+                    <div class="chaiDiv technologies"><a href="http://chaijs.com/" target="_blank"></a></div>
+                </li>
+            </ul>
+            <ul class="workflowTechs">
+                <h1 class="workflowTechHeader"><span class="headerUnderlineWorkflow">Workflow</span></h1>
+                <li class="listItem">
+                    <div class="githubDiv technologies"><a href="https://github.com/condericson" target="_blank"></a></div>
+                </li>
+                <li class="listItem">
+                    <div class="herokuDiv technologies"><a href="https://www.heroku.com/" target="_blank"></a></div>
+                    <div class="surgeDiv technologies"><a href="http://surge.sh/" target="_blank"></a></div>
+                </li>
+                <li class="listItem">
+                    <div class="travisDiv technologies"><a href="https://travis-ci.org/" target="_blank"></a></div>
+                    <div class="cloudinaryDiv technologies"><a href="http://cloudinary.com/" target="_blank"></a></div>
+                </li>
+                
+            </ul>
+        </div>
+
+        <div class="contactSection">
+            <h1 class="wanttochat">Want to chat?</h1>
+            <div class="linkedinDiv"><a href="https://www.linkedin.com/in/connor-ericson-17507b12b/" target="_blank"></a></div>
+        </div>
     </div>
     
-    
-
-    <div class="portfolioSection">
-        <h1 class="portfolioSectionHeader">Projects:</h1>
-        <ul class="listOfPortfolioPieces">
-            <li class="portfolioPiece">
-                <div class="piecePic">
-                    <a href="https://github.com/condericson/babysfirst"><img class="projectPics" src="http://i.imgur.com/GXgZ0su.png" alt="First Memories"></a>
-                </div>
-                <div class="firstmemoriesdescriptiondiv pieceDescription">
-                    <p class="firstmemoriesdescription descriptionP"><a class="pieceTitle firstMemoriesTitle" href="https://github.com/condericson/babysfirst">First Memories</a> is a online journaling application for parents that want a way to record pictures and journal entries about their child from anywhere. This application uses a React/Redux framework to display user provided journal entries stored with MongoDB using Node.js and stores images with the image cloud service, <a class="otherResourceLink" href="http://cloudinary.com">Cloudinary</a></p>
-                </div>
-            <li class="portfolioPiece">
-                <div class="piecePic evenPic">
-                    <a href="https://dinnerplans-condericson.herokuapp.com/"><img class="projectPics" src="http://i.imgur.com/Nsj22L3.png" alt="Dinner Plans"></a>
-                </div>
-                <div class="dinnerplansdescriptiondiv pieceDescription">
-                    <p class="dinnerplansdescriptionp descriptionP"><a class="pieceTitle dinnerPlansTitle" href="https://dinnerplans-condericson.herokuapp.com/">Dinner Plans</a> is a meal preparation application designed to assist with organizing meals on a weekly basis, provide search results using keywords from <a class="otherResourceLink" href="http://www.yummly.com/">Yummly</a>'s API for recipes that can be added to the weekly view, to allow users to upload their own recipes to the weekly view, and to create a grocery list using the ingredients of the recipes in the week for ease of shopping. This application uses Javascript and jQuery on the front end and stores recipes provided or selected by the user in a MongoDB with Node.js</p>
-                </div>
-            <li class="portfolioPiece">
-                <div class="piecePic">
-                    <a href="https://condericson.github.io/concertfinder/"><img class="projectPics" src="http://i.imgur.com/8IbdD01.png" alt="Concert Finder"></a>
-                </div>
-                <div class="concertfinderdescriptiondiv pieceDescription">
-                    <p class="concertfinderdescriptionp descriptionP"><a class="pieceTitle concertFinderTitle" href="https://condericson.github.io/concertfinder/">Concert Finder</a> is a application made to query <a class="otherResourceLink" href="https://seatgeek.com/">Seat Geek</a>'s API and display search results based on user input for concerts by artist. Additionally, once found, the user can click to display a map provided by a <a class="otherResourceLink" href="https://developers.google.com/maps/">Google Maps</a> API query. This application, the first application I ever created, uses HTML, CSS,  Javascript, and jQuery.</p>
-                </div>
-        </ul>
-    </div>
-
-    <div class="technologySection">
-        <h1>Technologies:</h1>
-        <p><span class="click">Click</span><span class="tap">Tap</span> to learn more!</p>
-        <ul class="frontendTechs">
-            <h1 class="frontendTechHeader"><span class="headerUnderlineFrontEnd">Front End</span></h1>
-            <li class="listItem">
-                <div class="htmlDiv technologies"><a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"></a></div>
-                <div class="cssDiv technologies"><a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank"></a></div>
-            </li>
-            <li class="listItem">
-                <div class="javascriptDiv technologies"><a href="https://www.javascript.com/" target="_blank"></a></div>
-                <div class="jqueryDiv technologies"><a href="https://jquery.com/" target="_blank"></a></div> 
-            </li>  
-            <li class="listItem">
-                <div class="reactDiv technologies"><a href="https://facebook.github.io/react/" target="_blank"></a></div>
-                <div class="reduxDiv technologies"><a href="http://redux.js.org/" target="_blank"></a></div>
-            </li>
-        </ul>
-        <ul class="backendTechs">
-            <h1 class="backendTechHeader"><span class="headerUnderlineBackEnd">Back End</span></h1>
-            <li class="listItem">
-                <div class="nodejsDiv technologies"><a href="https://nodejs.org/" target="_blank"></a></div>
-                <div class="npmDiv technologies"><a href="https://www.npmjs.com/" target="_blank"></a></div>
-            </li>
-            <li class="listItem">
-                <div class="mongodbDiv technologies"><a href="https://www.mongodb.com/" target="_blank"></a></div>            
-            </li>
-            <li class="listItem">
-                <div class="mochaDiv technologies"><a href="https://mochajs.org/" target="_blank"></a></div>
-                <div class="chaiDiv technologies"><a href="http://chaijs.com/" target="_blank"></a></div>
-            </li>
-        </ul>
-        <ul class="workflowTechs">
-            <h1 class="workflowTechHeader"><span class="headerUnderlineWorkflow">Workflow</span></h1>
-            <li class="listItem">
-                <div class="githubDiv technologies"><a href="https://github.com/condericson" target="_blank"></a></div>
-            </li>
-            <li class="listItem">
-                <div class="herokuDiv technologies"><a href="https://www.heroku.com/" target="_blank"></a></div>
-                <div class="surgeDiv technologies"><a href="http://surge.sh/" target="_blank"></a></div>
-            </li>
-            <li class="listItem">
-                <div class="travisDiv technologies"><a href="https://travis-ci.org/" target="_blank"></a></div>
-                <div class="cloudinaryDiv technologies"><a href="http://cloudinary.com/" target="_blank"></a></div>
-            </li>
-            
-        </ul>
-    </div>
-
-    <div class="contactSection">
-        <h1 class="wanttochat">Want to chat?</h1>
-        <div class="linkedinDiv"><a href="https://www.linkedin.com/in/connor-ericson-17507b12b/" target="_blank"></a></div>
-    </div>
-    
+    <script type="text/javascript" src="./index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 </html>
