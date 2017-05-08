@@ -2,7 +2,7 @@
 
 window.onload = function(){
     setInterval(function(){
-        $('.openingHeader').addClass('openingHeaderDisplayed');
+        $('.hidiv').addClass('openingHeaderDisplayed');
     }, 500);
 
     // setInterval(function(){

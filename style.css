@@ -34,20 +34,9 @@ li {
     z-index: 10;
 }
 
-.openingHeader {
-    width: 100%;
-    text-align: center;
-    z-index: 10;
-    color: blue;
-    transition: all .5s ease;
-    -webkit-transition: all .5s ease;
-    -ms-transition: all .5s ease;
-    -moz-transition: all .5s ease;
-    -o-transition: all .5s ease;
-}
-
 .openingHeaderDisplayed {
     color: white;
+    z-index: 15;
 }
 
 .fullsite {
