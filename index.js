@@ -7,30 +7,37 @@ window.onload = function(){
 
     setInterval(function(){
         $('.openingSection').addClass('fadeOut');
-    }, 0);
+    }, 1500);
 
     setInterval(function(){
         $('.openingSection').addClass('hidden');
-    }, 3000);
+    }, 2500);
 
     scrollManager();
 
 };
 
 function scrollManager() {
-	var oTop = $('.wanttochat').offset().top - window.innerHeight;
+	var fromTop = $('.wanttochat').offset().top - window.innerHeight;
     $(window).scroll(function(){
     
- 		var pTop = $('body').scrollTop();
-    	console.log( pTop + ' - ' + oTop );
- 		if( pTop > oTop ){
-     		start_count();
+ 		var bodyTop = $('body').scrollTop();
+    	console.log( bodyTop + ' - ' + fromTop );
+ 		if( bodyTop > fromTop ){
+     		chatSlideIn();
  		}
 	});
 };
 
-function start_count(){
+function chatSlideIn(){
     setInterval(function(){
-	    $('.wanttochat').addClass('slideIn');
+	    $('.wanttochat').addClass('slideInChat');
     }, 200);
+    setInterval(function(){
+	    $('.emailDiv').addClass('slideInEmail');
+    }, 600);
+    setInterval(function(){
+	    $('.linkedinDiv').addClass('slideInLinked');
+    }, 1000);
+
 }

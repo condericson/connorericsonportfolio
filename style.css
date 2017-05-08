@@ -401,8 +401,8 @@ a {
     -o-transition: all 1s ease;
 }
 
-.slideIn {
-right: 0px;
+.slideInChat {
+    right: 0px;
 }
 
 .linkedinDiv {
@@ -414,7 +414,16 @@ right: 0px;
     cursor: pointer;
     position: absolute;
     display: inline-block;
-    right: 70px;
+    right: -200px;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+
+.slideInLinked {
+    right: 40px;
 }
 
 .emailDiv {
@@ -423,5 +432,14 @@ right: 0px;
     color: white;
     display: inline-block;
     position: absolute;
-    right: 128px;
+    right: -200px;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+
+.slideInEmail {
+    right: 100px;
 }
