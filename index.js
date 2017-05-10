@@ -6,19 +6,35 @@ window.onload = function(){
     }, 500);
 
     setInterval(function(){
-        $('.openingSection').addClass('fadeOut');
+        $('.introPDiv').addClass('introPDivDisplayed');
     }, 1500);
 
     setInterval(function(){
-        $('.openingSection').addClass('hidden');
+        $('.openingSection').addClass('fadeOut');
     }, 2500);
+
+    setInterval(function(){
+        $('.openingSection').addClass('hidden');
+    }, 3500);
+
+    setInterval(function(){
+        $('.aboutLink').addClass('linkShown');
+    }, 3300);
+
+    setInterval(function(){
+        $('.projectsLink').addClass('linkShown');
+    }, 3600);
+
+    setInterval(function(){
+        $('.techLink').addClass('linkShown');
+    }, 3900);
 
     scrollManager();
 
 };
 
 function scrollManager() {
-	var fromTop = $('.wanttochat').offset().top - window.innerHeight;
+	var fromTop = $('.contactSection').offset().top - window.innerHeight;
     $(window).scroll(function(){
     
  		var bodyTop = $('body').scrollTop();
@@ -41,3 +57,22 @@ function chatSlideIn(){
     }, 1000);
 
 }
+
+
+$('.aboutLink').click(function() {
+    $('html,body').animate({
+        scrollTop: $(".aboutMeSection").offset().top},
+        'slow');
+});
+
+$('.projectsLink').click(function() {
+    $('html,body').animate({
+        scrollTop: $(".portfolioSection").offset().top},
+        'slow');
+});
+
+$('.techLink').click(function() {
+    $('html,body').animate({
+        scrollTop: $(".technologySection").offset().top},
+        'slow');
+});

@@ -79,18 +79,65 @@ a {
 }
 
 .hi {
-    
-    font-size: 43px;}
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 75px;
+}
 
-.introp {
-    position: relative;
+.introPDiv {
+    position: absolute;
     top: 50%;
     width: 100%;
     text-align: center;
-    color: white;
-    font-size: 24px;
+    color: #2a2a2a;
+    font-size: 30px;
+    padding: 0px 20px;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    z-index: 15;
+}
+
+.introPDivDisplayed {
+    color: white !important;
     text-shadow: 0px 0px 6px black;
 }
+
+nav {
+    position: relative;
+    top: -59px;
+    height: 0;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+.aboutLink, .projectsLink, .techLink {
+    display: inline-block;
+    margin: 0px 8%;
+    cursor: pointer;
+    font-size: 30px;
+    text-shadow: 0px 0px 8px black;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    opacity: 0;   
+}
+
+.linkShown {
+    opacity: 1;
+}
+
+
+@media only screen and (max-width: 700px) {
+    
+}
+
+
+
 
 .aboutMeSection {
     text-align: center;
@@ -123,8 +170,12 @@ a {
 }
 
 .portfolioSection {
-    background-color: black;
+    background-image: url(http://image.ibb.co/b5c1t5/darkbricks_2.png);
     color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50%;
 }
 
 .listOfPortfolioPieces {
@@ -134,12 +185,18 @@ a {
 
 .portfolioSectionHeader {
     text-align: center;
-    padding: 20px 0px 30px;
+    padding: 30px 0px 30px;
+    color:white;
 }
 
 .portfolioPiece {
     display: inline-block;
-    width: 90%;
+    width: 100%;
+    min-height: 400px;
+}
+
+.firstmemoriesLi {
+ 
 }
 
 .piecePic, .pieceDescription {
@@ -154,19 +211,20 @@ a {
 }
 
 .firstMemoriesTitle {
-    color: #ecc287;
+    color: #ffcb68;
 }
 
 .dinnerPlansTitle {
-    color: #9a4e2a;
+    color: #fc6c27;
 }
 
 .concertFinderTitle {
-    color: #861686;
+    color: #fa06fa;
 }
 
 .pieceDescription {
     max-width: 500px;
+    text-align: left;
 }
 
 .descriptionP {
@@ -174,7 +232,7 @@ a {
 }
 
 .projectPics {
-    max-width: 400px;
+    max-width: 500px;
     width: 100%;
 }
 
@@ -204,6 +262,16 @@ a {
     padding: 10px 0;
 }
 
+.mongoList {
+    padding: 0px;
+}
+
+.bcryptlist {
+    height: 49px;
+    font-size: 38px;
+    padding-top: 0px;
+}
+
 .technologies {
     height: 100px;
     width: 100px;
@@ -211,6 +279,10 @@ a {
     background-repeat: no-repeat;
     cursor: pointer;
     display: inline-block;
+}
+
+.bcryptDiv {
+    width: 100%;
 }
 
 .technologies > a {
@@ -251,7 +323,7 @@ a {
     -o-transition: all .5s ease;
 }
 
-.frontendTechs:hover {
+/*.frontendTechs:hover {
     box-shadow: 0px 0px 12px #a2d6f5;
 }
 
@@ -261,7 +333,7 @@ a {
 
 .workflowTechs:hover {
     box-shadow: 0px 0px 12px #fffdb4;
-}
+}*/
 
 @media only screen and (max-width: 560px) {
     .frontendTechs {
