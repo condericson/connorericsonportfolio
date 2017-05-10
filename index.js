@@ -3,11 +3,11 @@
 window.onload = function(){
     setInterval(function(){
         $('.hidiv').addClass('hidivDisplayed');
-    }, 500);
+    }, 400);
 
     setInterval(function(){
         $('.introPDiv').addClass('introPDivDisplayed');
-    }, 1500);
+    }, 1200);
 
     setInterval(function(){
         $('.openingSection').addClass('fadeOut');
@@ -15,18 +15,18 @@ window.onload = function(){
 
     setInterval(function(){
         $('.openingSection').addClass('hidden');
-    }, 3500);
+    }, 0);
 
     setInterval(function(){
-        $('.aboutLink').addClass('linkShown');
+        $('.aboutLink').addClass('shown');
     }, 3300);
 
     setInterval(function(){
-        $('.projectsLink').addClass('linkShown');
+        $('.projectsLink').addClass('shown');
     }, 3600);
 
     setInterval(function(){
-        $('.techLink').addClass('linkShown');
+        $('.techLink').addClass('shown');
     }, 3900);
 
     scrollManager();
@@ -34,14 +34,17 @@ window.onload = function(){
 };
 
 function scrollManager() {
-	var fromTop = $('.contactSection').offset().top - window.innerHeight;
+	var contactSectionFromTop = $('.contactSection').offset().top - window.innerHeight;
+    var project1 = $('.firstmemoriesdescriptiondiv').offset().top - window.innerHeight;
     $(window).scroll(function(){
     
  		var bodyTop = $('body').scrollTop();
-    	console.log( bodyTop + ' - ' + fromTop );
- 		if( bodyTop > fromTop ){
+ 		if( bodyTop > contactSectionFromTop ){
      		chatSlideIn();
  		}
+        if( bodyTop > project1) {
+            firstMemoriesTechSlideIn();
+        }
 	});
 };
 
@@ -55,6 +58,16 @@ function chatSlideIn(){
     setInterval(function(){
 	    $('.linkedinDiv').addClass('slideInLinked');
     }, 1000);
+
+}
+
+function firstMemoriesTechSlideIn(){
+    setInterval(function(){
+	    $('.reactInFirstMemoriesDiv').addClass('shown');
+    }, 700);
+    setInterval(function(){
+	    $('.nodeInFirstMemoriesDiv').addClass('shown');
+    }, 1200);
 
 }
 

@@ -49,7 +49,7 @@ a {
 .headerSection {
     width: 100%;
     height: 100%;
-    background-image: url(http://i.imgur.com/5yWGixH.jpg);
+    background-image: url(http://image.ibb.co/g4C4fk/pexels_photo_380769.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -105,16 +105,19 @@ a {
 }
 
 nav {
-    position: relative;
-    top: -59px;
-    height: 0;
+    position: absolute;
+    height: 70px;
+    width: 100%;
     text-align: center;
     color: white;
     font-size: 30px;
+    bottom: 0px;
+    background: linear-gradient(rgba(0, 0, 0, 0), #4b4b4b);
 }
 
 .aboutLink, .projectsLink, .techLink {
     display: inline-block;
+    vertical-align: -webkit-baseline-middle;
     margin: 0px 8%;
     cursor: pointer;
     font-size: 30px;
@@ -124,11 +127,7 @@ nav {
     -ms-transition: all .5s ease;
     -moz-transition: all .5s ease;
     -o-transition: all .5s ease;
-    opacity: 0;   
-}
-
-.linkShown {
-    opacity: 1;
+    opacity: 0;
 }
 
 
@@ -393,7 +392,7 @@ nav {
 }
 
 .nodejsDiv {
-    background-image: url(http://image.ibb.co/nvYeT5/nodejs_logo_FBE122_E377_seeklogo_com.png);
+    background-image: url(http://image.ibb.co/bR9ED5/node_no_background.png);
     height: 90px;
     width: 90px;
 }
@@ -405,7 +404,7 @@ nav {
 
 .reactDiv {
     height: 100px;
-    background-image: url(http://image.ibb.co/kJ5Kt5/react_logo_white.jpg);
+    background-image: url(http://image.ibb.co/eOzNY5/react.png);
 }
 
 .reduxDiv {
@@ -514,4 +513,27 @@ nav {
 
 .slideInEmail {
     right: 100px;
+}
+
+.reactInFirstMemoriesDiv {
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    opacity: 0;
+}
+
+.nodeInFirstMemoriesDiv {
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    opacity: 0;
+}
+
+
+.shown {
+    opacity: 1;
 }
