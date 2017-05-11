@@ -140,3 +140,9 @@ $('.techLink').click(function() {
         scrollTop: $(".technologySection").offset().top},
         'slow');
 });
+
+$('.backToTop').click(function() {
+    $('html,body').animate({
+        scrollTop: $("body").offset().top},
+        'slow');
+});
