@@ -15,7 +15,7 @@ window.onload = function(){
 
     setInterval(function(){
         $('.openingSection').addClass('hidden');
-    }, 35000);
+    }, 3500);
 
     setInterval(function(){
         $('.aboutLink').addClass('shown');
@@ -35,18 +35,77 @@ window.onload = function(){
 
 function scrollManager() {
 	var contactSectionFromTop = $('.contactSection').offset().top - window.innerHeight;
-    var project1 = $('.firstmemoriesdescriptiondiv').offset().top - window.innerHeight;
+    var firstmemoriesLevel = $('.dinnerplansLi').offset().top - window.innerHeight;
+    var dinnerplansLevel = $('.concertfinderLi').offset().top - window.innerHeight;
+    var concertfinderLevel = $('.technologySection').offset().top - window.innerHeight;
+    var technologiesLevel = $('.javascriptDiv').offset().top - window.innerHeight;
     $(window).scroll(function(){
-    
  		var bodyTop = $('body').scrollTop();
  		if( bodyTop > contactSectionFromTop ){
      		chatSlideIn();
  		}
-        if( bodyTop > project1) {
+        if( bodyTop > firstmemoriesLevel) {
             firstMemoriesTechSlideIn();
         }
+        if( bodyTop > dinnerplansLevel) {
+            dinnerplansTechSlideIn();
+        }
+        if( bodyTop > concertfinderLevel) {
+            concertfinderTechSlideIn();
+        }
+        // if( bodyTop > technologiesLevel) {
+        //     technologySlideIn();
+        // }
 	});
 };
+
+function firstMemoriesTechSlideIn(){
+    setInterval(function(){
+	    $('.reactInFirstMemoriesDiv').addClass('shownTechs');
+    }, 200);
+    setInterval(function(){
+	    $('.nodeInFirstMemoriesDiv').addClass('shownTechs');
+    }, 600);
+    setInterval(function(){
+	    $('.cloudinaryInFirstMemoriesDiv').addClass('shownTechs');
+    }, 1000);
+}
+
+function dinnerplansTechSlideIn(){
+    setInterval(function(){
+	    $('.jqueryInDinnerPlansDiv').addClass('shownTechs');
+    }, 200);
+    setInterval(function(){
+	    $('.nodeInDinnerPlansDiv').addClass('shownTechs');
+    }, 600);
+    setInterval(function(){
+	    $('.yummlyInDinnerPlansDiv').addClass('shownTechs');
+    }, 1000);
+}
+
+function concertfinderTechSlideIn(){
+    setInterval(function(){
+	    $('.jqueryInConcertFinderDiv').addClass('shownTechs');
+    }, 200);
+    setInterval(function(){
+	    $('.seatgeekInConcertFinderDiv').addClass('shownTechs');
+    }, 600);
+    setInterval(function(){
+	    $('.googleMapsInConcertFinderDiv').addClass('shownTechs');
+    }, 1000);
+}
+
+// function technologySlideIn(){
+//     setInterval(function(){
+// 	    $('.frontendTechs').addClass('shownTechSections');
+//     }, 200);
+//     setInterval(function(){
+// 	    $('.backendTechs').addClass('shownTechSections');
+//     }, 600);
+//     setInterval(function(){
+// 	    $('.workflowTechs').addClass('shownTechSections');
+//     }, 1000);
+// }
 
 function chatSlideIn(){
     setInterval(function(){
@@ -58,17 +117,9 @@ function chatSlideIn(){
     setInterval(function(){
 	    $('.linkedinDiv').addClass('slideInLinked');
     }, 1000);
-
-}
-
-function firstMemoriesTechSlideIn(){
     setInterval(function(){
-	    $('.reactInFirstMemoriesDiv').addClass('shown');
-    }, 700);
-    setInterval(function(){
-	    $('.nodeInFirstMemoriesDiv').addClass('shown');
-    }, 1200);
-
+	    $('.backToTop').addClass('backToTopShown');
+    }, 400);
 }
 
 

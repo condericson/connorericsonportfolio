@@ -6,6 +6,8 @@
 html, body {
     width: 100%;
     height: 100%;
+    padding: 0;
+
 }
 
 h1, p, body {
@@ -56,6 +58,12 @@ a {
     background-position: 50%;
     position: relative;
     text-align: right;
+}
+
+.greyedout {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 33, 33, 0.4);
 }
 
 .hidiv {
@@ -157,6 +165,8 @@ nav {
 
 .aboutMeP {
     padding-bottom: 10px;
+    font-size: 24px;
+    line-height: 1.3;
 }
 
 @media only screen and (max-width:900px) {
@@ -169,12 +179,7 @@ nav {
 }
 
 .portfolioSection {
-    background-image: url(http://image.ibb.co/b5c1t5/darkbricks_2.png);
     color: white;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 50%;
 }
 
 .listOfPortfolioPieces {
@@ -186,16 +191,26 @@ nav {
     text-align: center;
     padding: 30px 0px 30px;
     color:white;
+    background-color: #555;
 }
 
 .portfolioPiece {
     display: inline-block;
     width: 100%;
-    min-height: 400px;
+    min-height: 410px;
+    padding-top: 20px;
 }
 
 .firstmemoriesLi {
- 
+    background-color: #444;
+}
+
+.dinnerplansLi {
+    background-color: #333;
+}
+
+.concertfinderLi {
+    background-color: #222;
 }
 
 .piecePic, .pieceDescription {
@@ -228,6 +243,11 @@ nav {
 
 .descriptionP {
     line-height: 22px;
+    padding-bottom: 10px;
+}
+
+.dinnerplansdescriptionp {
+    padding-top: 10px;
 }
 
 .projectPics {
@@ -320,19 +340,10 @@ nav {
     -ms-transition: all .5s ease;
     -moz-transition: all .5s ease;
     -o-transition: all .5s ease;
+    /*position: relative;
+    top: 50px;
+    opacity: 0;*/
 }
-
-/*.frontendTechs:hover {
-    box-shadow: 0px 0px 12px #a2d6f5;
-}
-
-.backendTechs:hover {
-    box-shadow: 0px 0px 12px #affd9e;
-}
-
-.workflowTechs:hover {
-    box-shadow: 0px 0px 12px #fffdb4;
-}*/
 
 @media only screen and (max-width: 560px) {
     .frontendTechs {
@@ -452,7 +463,6 @@ nav {
 
 .contactInfoDiv {
     position: absolute;
-    text-align: right;
     width: 100%;
     height: 150px;
     margin: 0px;
@@ -464,7 +474,7 @@ nav {
     font-size: 24px;
     margin: 10px;
     position: relative;
-    right: -200px;
+    left: -200px;
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
     -ms-transition: all 1s ease;
@@ -473,7 +483,7 @@ nav {
 }
 
 .slideInChat {
-    right: 0px;
+    left: 0px;
 }
 
 .linkedinDiv {
@@ -485,7 +495,7 @@ nav {
     cursor: pointer;
     position: absolute;
     display: inline-block;
-    right: -200px;
+    left: -200px;
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
     -ms-transition: all 1s ease;
@@ -494,7 +504,7 @@ nav {
 }
 
 .slideInLinked {
-    right: 40px;
+    left: 40px;
 }
 
 .emailDiv {
@@ -503,7 +513,7 @@ nav {
     color: white;
     display: inline-block;
     position: absolute;
-    right: -200px;
+    left: -200px;
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
     -ms-transition: all 1s ease;
@@ -512,10 +522,16 @@ nav {
 }
 
 .slideInEmail {
-    right: 100px;
+    left: 100px;
 }
 
-.reactInFirstMemoriesDiv {
+.projectTechs {
+    height: 100px;
+    width: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: inline-block;
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
     -ms-transition: all 1s ease;
@@ -524,16 +540,60 @@ nav {
     opacity: 0;
 }
 
-.nodeInFirstMemoriesDiv {
+.backToTop {
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: -200px;
+    top: 0px;
+    color: white;
+    font-size: 24px;
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
     -ms-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
-    opacity: 0;
 }
 
+.backToTopShown {
+    right: 10px;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+}
+
+.cloudinaryInFirstMemoriesDiv {
+    background-image: url(http://image.ibb.co/n10eD5/cloudinary_vertical_logo_for_dark_bg_2.png);
+}
+
+.jqueryInFirstMemoriesDiv, .jqueryInDinnerPlansDiv, .jqueryInConcertFinderDiv {
+    background-image: url(http://image.ibb.co/fvdrAk/jquerylogo320.png);
+}
+
+.yummlyInDinnerPlansDiv {
+    background-image: url(http://image.ibb.co/fuJo6Q/Yummly_Logo.png);
+}
+
+.seatgeekInConcertFinderDiv {
+    background-image: url(http://image.ibb.co/gfaqLk/0x0.png);
+}
+
+.googleMapsInConcertFinderDiv {
+    background-image: url(http://image.ibb.co/fC7n0k/nexus2cee_12.png);
+}
 
 .shown {
+    opacity: 1;
+}
+
+.shownTechs {
+    opacity: 1;
+    margin: 0px 20px;
+}
+
+.shownTechSections {
+    top: 0px;
     opacity: 1;
 }
