@@ -114,9 +114,13 @@ function chatSlideIn(){
     setInterval(function(){
 	    $('.emailDiv').addClass('slideInEmail');
     }, 600);
+    
     setInterval(function(){
 	    $('.linkedinDiv').addClass('slideInLinked');
     }, 1000);
+    setInterval(function(){
+	    $('.emailaddress').addClass('slideInEmailAddress');
+    }, 1800);
     setInterval(function(){
 	    $('.backToTop').addClass('backToTopShown');
     }, 400);

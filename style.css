@@ -182,16 +182,16 @@ nav {
     text-align: center;
     width: 60%;
     padding: 10px;
-    margin: 55px auto 55px;
+    margin: 40px auto 55px;
 }
 
 .aboutMeHeader {
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 
 .aboutMeP {
     padding-bottom: 10px;
-    font-size: 24px;
+    font-size: 19px;
     line-height: 1.3;
 }
 
@@ -341,8 +341,8 @@ nav {
     min-height: 600px;
 }
 
-.tap {
-    display: none;
+.centeredDivs {
+    text-align: center;
 }
 
 @media only screen and (max-width: 800px) {
@@ -359,34 +359,46 @@ nav {
     vertical-align: text-top;
     width: 250px;
     margin: 10px;
-    min-height: 440px;
+    min-height: 450px;
     transition: all .5s ease;
     -webkit-transition: all .5s ease;
     -ms-transition: all .5s ease;
     -moz-transition: all .5s ease;
     -o-transition: all .5s ease;
-    /*position: relative;
-    top: 50px;
-    opacity: 0;*/
 }
+
+.frontendTechs {
+    border-bottom: 5px solid #1c88c8;
+}
+
+.backendTechs {
+    border-bottom: 5px solid #7bd268;
+}
+
+.workflowTechs {
+    border-bottom: 5px solid #fff800;
+}
+
+
 
 .frontendTechHeader, .backendTechHeader, .workflowTechHeader {
     display: inline-block;
     width: 100%;
     text-align: center;
-    padding: 20px 0px 10px;
+    padding: 20px 0px 0px;
+    margin-bottom: 10px;
 }
 
-.headerUnderlineFrontEnd {
+.frontendTechHeader {
     border-bottom: 5px solid #1c88c8;
 }
 
-.headerUnderlineBackEnd {
+.backendTechHeader {
     border-bottom: 5px solid #7bd268;
 }
 
-.headerUnderlineWorkflow {
-    border-bottom: 5px solid #fffdb4;
+.workflowTechHeader {
+    border-bottom: 5px solid #fff800;
 }
 
 .htmlDiv {
@@ -491,10 +503,12 @@ nav {
     -ms-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
+    opacity: 0;
 }
 
 .slideInChat {
     left: 0px;
+    opacity: 1;
 }
 
 .linkedinDiv {
@@ -512,10 +526,12 @@ nav {
     -ms-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
+    opacity: 0;
 }
 
 .slideInLinked {
     left: 40px;
+    opacity: 1;
 }
 
 .emailDiv {
@@ -530,10 +546,38 @@ nav {
     -ms-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
+    opacity: 0;
 }
 
 .slideInEmail {
     left: 100px;
+    opacity: 1;
+}
+
+.emailaddress {
+    display: inline-block;
+    position: absolute;
+    left: 140px;
+    top: 70px;
+    color: white;
+    font-size: 20px;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    opacity: 0;
+}
+
+.slideInEmailAddress {
+    top: 50px;
+    opacity: 1;
+}
+
+@media only screen and (max-width:500px) {
+    .emailaddress {
+        display: none;
+    }
 }
 
 .projectTechs {
@@ -619,7 +663,7 @@ nav {
 
 .shownTechs {
     opacity: 1;
-    margin: 0px 35px;
+    margin: 0px 28px;
 }
 
 @media only screen and (max-width: 550px) {
@@ -632,11 +676,4 @@ nav {
 .shownTechSections {
     top: 0px;
     opacity: 1;
-}
-
-/*Fixed background-image: cover issue on iOS*/
-@media only screen and (max-width: 1100px) {
-  .headerSection {
-    background-attachment: scroll;
-  }
 }
