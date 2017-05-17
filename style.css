@@ -78,12 +78,14 @@ a {
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
     color: rgba(33, 33, 33, 0);
+    opacity: 0;
     z-index: 15;
 }
 
 .hidivDisplayed {
     color: white !important;
     text-shadow: 0px 0px 6px rgba(33, 33, 33, 0.4);
+    opacity: 1;
 }
 
 .hi {
@@ -111,11 +113,13 @@ a {
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
     z-index: 15;
+    opacity: 0;
 }
 
 .introPDivDisplayed {
     color: white !important;
     text-shadow: 0px 0px 6px rgba(33, 33, 33, 0.4);
+    opacity: 1;
 }
 
 @media only screen and (max-width: 1050px) {
