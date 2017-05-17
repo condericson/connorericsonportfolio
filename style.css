@@ -296,6 +296,12 @@ nav {
     background-color: white;
 }
 
+.projectTechs > a {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
 
 
 
