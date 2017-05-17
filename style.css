@@ -83,7 +83,7 @@ a {
 
 .hidivDisplayed {
     color: white !important;
-    text-shadow: 0px 0px 6px black;
+    text-shadow: 0px 0px 6px rgba(33, 33, 33, 0.4);
 }
 
 .hi {
@@ -115,7 +115,7 @@ a {
 
 .introPDivDisplayed {
     color: white !important;
-    text-shadow: 0px 0px 6px black;
+    text-shadow: 0px 0px 6px rgba(33, 33, 33, 0.4);
 }
 
 @media only screen and (max-width: 1050px) {

@@ -15,7 +15,7 @@ window.onload = function(){
 
     setInterval(function(){
         $('.openingSection').addClass('hidden');
-    }, 3500);
+    }, 0);
 
     setInterval(function(){
         $('.aboutLink').addClass('shown');
