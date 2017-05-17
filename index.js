@@ -56,6 +56,7 @@ function scrollManager() {
 	});
 };
 
+
 function firstMemoriesTechSlideIn(){
     setInterval(function(){
 	    $('.reactInFirstMemoriesDiv').addClass('shownTechs');
