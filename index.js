@@ -1,6 +1,8 @@
 
 
 window.onload = function(){
+    $('.hidiv').addClass('transitions');
+    $('.introPDiv').addClass('transitions');
     setInterval(function(){
         $('.hidiv').addClass('hidivDisplayed');
     }, 400);
