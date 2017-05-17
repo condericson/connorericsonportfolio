@@ -15,7 +15,7 @@ window.onload = function(){
 
     setInterval(function(){
         $('.openingSection').addClass('hidden');
-    }, 0);
+    }, 3000);
 
     setInterval(function(){
         $('.aboutLink').addClass('shown');
@@ -91,18 +91,6 @@ function concertfinderTechSlideIn(){
 	    $('.googleMapsInConcertFinderDiv').addClass('shownTechs');
     }, 1000);
 }
-
-// function technologySlideIn(){
-//     setInterval(function(){
-// 	    $('.frontendTechs').addClass('shownTechSections');
-//     }, 200);
-//     setInterval(function(){
-// 	    $('.backendTechs').addClass('shownTechSections');
-//     }, 600);
-//     setInterval(function(){
-// 	    $('.workflowTechs').addClass('shownTechSections');
-//     }, 1000);
-// }
 
 function chatSlideIn(){
     setInterval(function(){
