@@ -35,9 +35,9 @@ window.onload = function(){
 
 function scrollManager() {
 	var contactSectionFromTop = $('.contactSection').offset().top - window.innerHeight;
-    var firstmemoriesLevel = $('.dinnerplansLi').offset().top - window.innerHeight;
-    var dinnerplansLevel = $('.concertfinderLi').offset().top - window.innerHeight;
-    var concertfinderLevel = $('.technologySection').offset().top - window.innerHeight;
+    var firstmemoriesLevel = $('.reactInFirstMemoriesDiv').offset().top - window.innerHeight;
+    var dinnerplansLevel = $('.jqueryInDinnerPlansDiv').offset().top - window.innerHeight;
+    var concertfinderLevel = $('.jqueryInConcertFinderDiv').offset().top - window.innerHeight;
     var technologiesLevel = $('.javascriptDiv').offset().top - window.innerHeight;
     $(window).scroll(function(){
  		var bodyTop = $('body').scrollTop();
@@ -53,9 +53,6 @@ function scrollManager() {
         if( bodyTop > concertfinderLevel) {
             concertfinderTechSlideIn();
         }
-        // if( bodyTop > technologiesLevel) {
-        //     technologySlideIn();
-        // }
 	});
 };
 
