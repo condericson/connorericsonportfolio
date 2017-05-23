@@ -581,7 +581,7 @@ nav {
 }
 
 .slideInEmailAddress {
-    top: 50px;
+    top: 52px;
     opacity: 1;
 }
 
@@ -699,8 +699,10 @@ nav {
 
 .aBackgroundInPeople {
     width: 100%;
-    padding: 0px 10% 40px;
-		background-color: #555555;
+    padding: 0px 9% 40px;
+    background-color: #555555;
+    position: relative;
+    min-height: 363px;
 }
 
 .aBackgroundInPeopleHeader {
@@ -717,14 +719,17 @@ nav {
 }*/
 
 .aBackgroundInPeopleImg {
-    height: 250px;
+    height: 275px;
     display: inline-block;
-    float: left;
-    padding: 15px;
+    position: absolute;
+    border-radius: 50%;
+    bottom: 45px;
 }
 
 .aBackgroundInPeoplePDiv {
+	position: relative;
 	display: inline-block;
+	text-align: right;
 }
 .aBackgroundInPeoplePDiv::after {
 	content: "";
@@ -738,22 +743,32 @@ nav {
 	padding: 15px;
 	font-size: 20px;
 	color: #e0e0e0;
+	text-align: left;
 }
 
-@media only screen and (max-width: 1270px) {
+@media only screen and (min-width: 1680px) {
+    .aBackgroundInPeople {
+    padding: 0px 15% 40px;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
 	.aBackgroundInPeople {
     padding: 0px 20px 40px;
-	}
+    text-align: center;
+ }
 
 	.aBackgroundInPeoplePDiv {
 		text-align: center;
 	}
 
 	.aBackgroundInPeopleImg {
-		float: none;
+	position: relative;
+	bottom: 0px;
 	}
 
 	.aBackgroundInPeopleP {
 		width: 100%;
+        text-align: center;
 	}
 }
