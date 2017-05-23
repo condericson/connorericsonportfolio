@@ -696,3 +696,64 @@ nav {
     background-attachment: scroll;
   }
 }
+
+.aBackgroundInPeople {
+    width: 100%;
+    padding: 0px 10% 40px;
+		background-color: #555555;
+}
+
+.aBackgroundInPeopleHeader {
+	width: 100%;
+	text-align: center;
+	padding: 20px 0px 20px;
+	color: #efefef;
+}
+
+/*.aBackgroundInPeopleImgDiv {
+	display: inline-block;
+	width: 250px;
+	text-align: center;
+}*/
+
+.aBackgroundInPeopleImg {
+    height: 250px;
+    display: inline-block;
+    float: left;
+    padding: 15px;
+}
+
+.aBackgroundInPeoplePDiv {
+	display: inline-block;
+}
+.aBackgroundInPeoplePDiv::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.aBackgroundInPeopleP {
+	display: inline-block;
+	width: 75%;
+	padding: 15px;
+	font-size: 20px;
+	color: #e0e0e0;
+}
+
+@media only screen and (max-width: 1270px) {
+	.aBackgroundInPeople {
+    padding: 0px 20px 40px;
+	}
+
+	.aBackgroundInPeoplePDiv {
+		text-align: center;
+	}
+
+	.aBackgroundInPeopleImg {
+		float: none;
+	}
+
+	.aBackgroundInPeopleP {
+		width: 100%;
+	}
+}

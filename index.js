@@ -20,15 +20,15 @@ window.onload = function(){
     }, 3000);
 
     setInterval(function(){
-        $('.aboutLink').addClass('shown');
+        $('.projectsLink').addClass('shown');
     }, 3300);
 
     setInterval(function(){
-        $('.projectsLink').addClass('shown');
+        $('.techLink').addClass('shown');
     }, 3600);
 
     setInterval(function(){
-        $('.techLink').addClass('shown');
+        $('.aboutLink').addClass('shown');
     }, 3900);
 
     scrollManager();
@@ -102,7 +102,7 @@ function chatSlideIn(){
     setInterval(function(){
 	    $('.emailDiv').addClass('slideInEmail');
     }, 600);
-    
+
     setInterval(function(){
 	    $('.linkedinDiv').addClass('slideInLinked');
     }, 1000);
@@ -117,24 +117,24 @@ function chatSlideIn(){
 
 $('.aboutLink').click(function() {
     $('html,body').animate({
-        scrollTop: $(".aboutMeSection").offset().top},
-        'slow');
+        scrollTop: $(".aBackgroundInPeople").offset().top},
+        1000);
 });
 
 $('.projectsLink').click(function() {
     $('html,body').animate({
         scrollTop: $(".portfolioSection").offset().top},
-        'slow');
+        1000);
 });
 
 $('.techLink').click(function() {
     $('html,body').animate({
         scrollTop: $(".technologySection").offset().top},
-        'slow');
+        1000);
 });
 
 $('.backToTop').click(function() {
     $('html,body').animate({
         scrollTop: $("body").offset().top},
-        'slow');
+        1000);
 });
