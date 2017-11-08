@@ -42,7 +42,7 @@ function scrollManager() {
     var concertfinderLevel = $('.jqueryInConcertFinderDiv').offset().top - window.innerHeight;
     var technologiesLevel = $('.javascriptDiv').offset().top - window.innerHeight;
     $(window).scroll(function(){
- 		var bodyTop = $('body').scrollTop();
+ 		var bodyTop = $(window).scrollTop();
  		if( bodyTop > contactSectionFromTop ){
      		chatSlideIn();
  		}
