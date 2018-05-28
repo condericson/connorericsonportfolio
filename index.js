@@ -138,3 +138,7 @@ $('.backToTop').click(function() {
         scrollTop: $("body").offset().top},
         1000);
 });
+
+$(".pageLinks").hover(function() {
+$(this).children('span').addClass()
+});
