@@ -13,7 +13,8 @@ window.onload = function(){
 
     setInterval(function(){
         $('.openingSection').addClass('fadeOut');
-    }, 2500);
+    // }, 2500);
+    }, 0);
 
     setInterval(function(){
         $('.openingSection').addClass('hidden');
@@ -37,24 +38,11 @@ window.onload = function(){
 
 function scrollManager() {
 	var contactSectionFromTop = $('.contactSection').offset().top - window.innerHeight;
-    var firstmemoriesLevel = $('.reactInFirstMemoriesDiv').offset().top - window.innerHeight;
-    var dinnerplansLevel = $('.jqueryInDinnerPlansDiv').offset().top - window.innerHeight;
-    var concertfinderLevel = $('.jqueryInConcertFinderDiv').offset().top - window.innerHeight;
-    var technologiesLevel = $('.javascriptDiv').offset().top - window.innerHeight;
     $(window).scroll(function(){
  		var bodyTop = $(window).scrollTop();
  		if( bodyTop > contactSectionFromTop ){
      		chatSlideIn();
  		}
-        if( bodyTop > firstmemoriesLevel) {
-            firstMemoriesTechSlideIn();
-        }
-        if( bodyTop > dinnerplansLevel) {
-            dinnerplansTechSlideIn();
-        }
-        if( bodyTop > concertfinderLevel) {
-            concertfinderTechSlideIn();
-        }
 	});
 };
 
@@ -138,3 +126,6 @@ $('.backToTop').click(function() {
         scrollTop: $("body").offset().top},
         1000);
 });
+
+
+//Flair
