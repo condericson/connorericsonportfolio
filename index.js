@@ -46,43 +46,6 @@ function scrollManager() {
 	});
 };
 
-
-function firstMemoriesTechSlideIn(){
-    setInterval(function(){
-	    $('.reactInFirstMemoriesDiv').addClass('shownTechs');
-    }, 200);
-    setInterval(function(){
-	    $('.nodeInFirstMemoriesDiv').addClass('shownTechs');
-    }, 600);
-    setInterval(function(){
-	    $('.cloudinaryInFirstMemoriesDiv').addClass('shownTechs');
-    }, 1000);
-}
-
-function dinnerplansTechSlideIn(){
-    setInterval(function(){
-	    $('.jqueryInDinnerPlansDiv').addClass('shownTechs');
-    }, 200);
-    setInterval(function(){
-	    $('.nodeInDinnerPlansDiv').addClass('shownTechs');
-    }, 600);
-    setInterval(function(){
-	    $('.yummlyInDinnerPlansDiv').addClass('shownTechs');
-    }, 1000);
-}
-
-function concertfinderTechSlideIn(){
-    setInterval(function(){
-	    $('.jqueryInConcertFinderDiv').addClass('shownTechs');
-    }, 200);
-    setInterval(function(){
-	    $('.seatgeekInConcertFinderDiv').addClass('shownTechs');
-    }, 600);
-    setInterval(function(){
-	    $('.googleMapsInConcertFinderDiv').addClass('shownTechs');
-    }, 1000);
-}
-
 function chatSlideIn(){
     setInterval(function(){
 	    $('.wanttochat').addClass('slideInChat');
@@ -101,7 +64,6 @@ function chatSlideIn(){
 	    $('.backToTop').addClass('backToTopShown');
     }, 400);
 }
-
 
 $('.aboutLink').click(function() {
     $('html,body').animate({

@@ -184,8 +184,7 @@ nav {
     margin: 40px auto 55px;
 }
 
-.aboutMeHeader {
-}
+.aboutMeHeader {}
 
 .aboutMeP {
     padding-bottom: 10px;
@@ -223,19 +222,23 @@ nav {
 
 .portfolioPiece {
     display: inline-block;
-    height: 595px;
+    height: 510px;
     padding-top: 20px;
     position: relative;
     vertical-align: text-top;
-    width: 33.33333333%;
+    width: 50%;
     font-size: 0;
 }
 
 @media screen and (max-width: 900px) {
     .portfolioPiece {
         width: 100%;
-        height: 460px;
+        height: 540px;
     }
+}
+
+.triviabotLi {
+    background-color: #282828;
 }
 
 .firstmemoriesLi {
@@ -261,6 +264,10 @@ nav {
 .pieceTitle {
     text-decoration: none;
     font-size: 30px;
+}
+
+.triviabotTitle {
+    color: #4fb2ff;
 }
 
 .firstMemoriesTitle {
@@ -293,6 +300,10 @@ nav {
 .projectPics {
     max-width: 400px;
     width: 100%;
+}
+
+.projectPics.triviabotprojectpic {
+    margin: 20px 0 15px;
 }
 
 .otherResourceLink {
@@ -335,7 +346,7 @@ nav {
 }
 
 .technologies {
-    height: 100px;
+    height: 94px;
     width: 100px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -416,18 +427,24 @@ nav {
 
 .javascriptDiv {
     background-image: url(http://image.ibb.co/mVYBqk/js.jpg);
+    width: 90px;
 }
 
 .mongodbDiv {
     background-image: url(http://image.ibb.co/ccBLi5/mongoDB.jpg);
-    width: 160px;
-    height: 60px;
+    width: 182px;
+    height: 77px;
+    margin: 10px 0;
 }
 
 .nodejsDiv {
     background-image: url(http://image.ibb.co/bR9ED5/node_no_background.png);
-    height: 90px;
-    width: 90px;
+    width: 100px;
+}
+
+.dotNetDiv {
+    background-image: url("./images/csharplogo.png");
+    width: 93px;
 }
 
 .reactDiv {
@@ -437,7 +454,7 @@ nav {
 
 .githubDiv {
     background-image: url(http://image.ibb.co/cGHZvk/Git_Hub_Mark_120px_plus.png);
-    width: 93px;
+    width: 81px;
 }
 
 .herokuDiv {
@@ -457,12 +474,41 @@ nav {
 
 .bitBucketDiv {
     background-image: url("./images/bitbucket.png");
-    width: 87px;
+    width: 75px;
+    background-position-y: 6px;
+    margin-left: 11px;
 }
 
 .azureDiv {
     background-image: url("./images/azure.jpg");
+    width: 111px;
+}
+
+.sqlDiv {
+    background-image: url("./images/mssql-logo-black.png");
+    width: 112px;
+}
+
+.salesforceDiv {
+    background-image: url("./images/sfcc.png");
+    width: 143px;
+}
+
+.jiraDiv {
+    background-image: url("./images/jira-logo.png");
+    width: 82px;
+}
+
+.mobxDiv {
+    background-image: url("./images/mobx.jpg");
     width: 87px;
+    background-position-y: 4px;
+}
+
+.scssDiv {
+    background-image: url("./images/scss-logo.png");
+    width: 92px;
+    margin-left: 12px;
 }
 
 .contactSection {
@@ -747,7 +793,7 @@ nav {
 }
 
 .professionalDevelopmentSection {
-    background-image: linear-gradient(#555555, #0071ce);
+    background-color: #555555;
 }
 
 .profDevLaptopPic {
@@ -866,5 +912,14 @@ nav {
         left: unset;
         right: 0px;
         bottom: unset;
+    }
+}
+
+@media screen and (max-width: 1163px) {
+    .aboutMeDiv {
+        padding: 10px 2%;
+    }
+    .aboutMeP {
+        width: 90%;
     }
 }

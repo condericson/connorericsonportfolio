@@ -66,8 +66,8 @@
 
     <div class="portfolioSection">
       <h1 class="portfolioSectionHeader">Professional Development</h1>
-      <ul class="professionalDevelopmentSection">
-        <li class="profDevLi">
+      <div class="professionalDevelopmentSection">
+        <div class="profDevLi">
           <!-- Aaron's -->
           <div class="profDevPics">
             <div class="techWrapper4">
@@ -115,8 +115,8 @@
               front end web application.
             </p>
           </div>
-        </li>
-      </ul>
+        </div>
+      </div>
       <div class="technologySection">
         <h1 class="technologiesHeader">Technologies</h1>
         <ul class="frontendTechs">
@@ -125,16 +125,30 @@
             <div class="javascriptDiv technologies">
               <a href="https://www.javascript.com/" target="_blank"></a>
             </div>
+            <div class="scssDiv technologies">
+              <a href="https://sass-lang.com/" target="_blank"></a>
+            </div>
+          </li>
+          <li class="listItem">
+            <div class="salesforceDiv technologies">
+              <a href="https://www.salesforce.com/products/commerce-cloud/overview/" target="_blank"></a>
+            </div>
           </li>
           <li class="listItem">
             <div class="reactDiv technologies">
               <a href="https://facebook.github.io/react/" target="_blank"></a>
+            </div>
+            <div class="mobxDiv technologies">
+              <a href="https://mobx.js.org/" target="_blank"></a>
             </div>
           </li>
         </ul>
         <ul class="backendTechs">
           <h1 class="backendTechHeader">Back End</h1>
           <li class="listItem">
+            <div class="dotNetDiv technologies shown">
+              <a href="https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet" target="_blank"></a>
+            </div>
             <div class="nodejsDiv technologies shown">
               <a href="https://nodejs.org/" target="_blank"></a>
             </div>
@@ -144,10 +158,17 @@
               <a href="https://www.mongodb.com/" target="_blank"></a>
             </div>
           </li>
+          <li class="listItem mongoList">
+            <div class="sqlDiv technologies">
+              <a href="https://www.microsoft.com/en-us/sql-server/sql-server-2019" target="_blank"></a>
+            </div>
+            <div class="azureDiv technologies">
+              <a href="https://azure.microsoft.com/en-us/" target="_blank"></a>
+            </div>
+          </li>
         </ul>
         <ul class="workflowTechs">
           <h1 class="workflowTechHeader">Workflow</h1>
-          <!-- Octopus, Team City, Bitbucket, JIRA, Azure -->
           <li class="listItem">
             <div class="githubDiv technologies">
               <a href="https://github.com/condericson" target="_blank"></a>
@@ -168,14 +189,29 @@
             <div class="herokuDiv technologies">
               <a href="https://www.heroku.com/" target="_blank"></a>
             </div>
-            <div class="azureDiv technologies">
-                <a href="https://azure.microsoft.com/en-us/" target="_blank"></a>
-              </div>
+            <div class="jiraDiv technologies">
+              <a href="https://www.atlassian.com/software/jira" target="_blank"></a>
+            </div>
           </li>
         </ul>
       </div>
       <h1 class="portfolioSectionHeader">Solo, Self-Teaching Projects</h1>
       <ul class="listOfPortfolioPieces">
+        <li class="portfolioPiece triviabotLi">
+          <div class="piecePic">
+            <img class="projectPics triviabotprojectpic" src="./images/trivia-bot-screenshot.png" alt="Trivia Slack Bot">
+          </div>
+          <div class="triviabotdiv pieceDescription">
+            <p class="triviabotdescription descriptionP">
+              <span class="pieceTitle triviabotTitle">Trivia Slack Bot</span>
+              is an app created to interface online journaling application for parents that want a way to record pictures and journal
+              entries about their child from anywhere. This application uses a React/Redux framework to display user
+              provided
+              journal entries stored with MongoDB using Node.js and stores images with the image cloud service,
+              <a class="otherResourceLink" href="https://slack.com/">Slack</a>
+            </p>
+          </div>
+        </li>
         <li class="portfolioPiece firstmemoriesLi">
           <div class="piecePic">
             <a href="http://firstmemories.surge.sh/" target="_blank">
