@@ -13,8 +13,7 @@ window.onload = function(){
 
     setInterval(function(){
         $('.openingSection').addClass('fadeOut');
-    // }, 2500);
-    }, 0);
+    }, 2500);
 
     setInterval(function(){
         $('.openingSection').addClass('hidden');
