@@ -1,38 +1,35 @@
+window.onload = function() {
+  $(".hidiv").addClass("transitions");
+  $(".introPDiv").addClass("transitions");
+  setInterval(function() {
+    $(".hidiv").addClass("hidivDisplayed");
+  }, 400);
 
+  setInterval(function() {
+    $(".introPDiv").addClass("introPDivDisplayed");
+  }, 1200);
 
-window.onload = function(){
-    $('.hidiv').addClass('transitions');
-    $('.introPDiv').addClass('transitions');
-    setInterval(function(){
-        $('.hidiv').addClass('hidivDisplayed');
-    }, 400);
+  setInterval(function() {
+    $(".openingSection").addClass("fadeOut");
+  }, 2500);
 
-    setInterval(function(){
-        $('.introPDiv').addClass('introPDivDisplayed');
-    }, 1200);
+  setInterval(function() {
+    $(".openingSection").addClass("hidden");
+  }, 3000);
 
-    setInterval(function(){
-        $('.openingSection').addClass('fadeOut');
-    }, 2500);
+  setInterval(function() {
+    $(".projectsLink").addClass("shown");
+  }, 3300);
 
-    setInterval(function(){
-        $('.openingSection').addClass('hidden');
-    }, 3000);
+  setInterval(function() {
+    $(".techLink").addClass("shown");
+  }, 3600);
 
-    setInterval(function(){
-        $('.projectsLink').addClass('shown');
-    }, 3300);
+  setInterval(function() {
+    $(".aboutLink").addClass("shown");
+  }, 3900);
 
-    setInterval(function(){
-        $('.techLink').addClass('shown');
-    }, 3600);
-
-    setInterval(function(){
-        $('.aboutLink').addClass('shown');
-    }, 3900);
-
-    scrollManager();
-
+  scrollManager();
 };
 
 function scrollManager() {
@@ -70,16 +67,22 @@ $('.aboutLink').click(function() {
         1000);
 });
 
-$('.projectsLink').click(function() {
-    $('html,body').animate({
-        scrollTop: $(".portfolioSection").offset().top},
-        1000);
+$(".techLink").click(function() {
+  $("html,body").animate(
+    {
+      scrollTop: $(".technologySection").offset().top
+    },
+    1000
+  );
 });
 
-$('.techLink').click(function() {
-    $('html,body').animate({
-        scrollTop: $(".technologySection").offset().top},
-        1000);
+$(".backToTop").click(function() {
+  $("html,body").animate(
+    {
+      scrollTop: $("body").offset().top
+    },
+    1000
+  );
 });
 
 $('.backToTop').click(function() {
@@ -88,5 +91,3 @@ $('.backToTop').click(function() {
         1000);
 });
 
-
-//Flair

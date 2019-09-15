@@ -1,6 +1,6 @@
 * {
-    font-family: 'Raleway', sans-serif;
-    box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
 }
 
 html, body {
@@ -9,17 +9,19 @@ html, body {
     padding: 0;
 }
 
-h1, p, body {
-    margin: 0;
+h1,
+p,
+body {
+  margin: 0;
 }
 
 ul {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 .hidden {
@@ -27,113 +29,130 @@ li {
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 .transitions {
-    transition: all 1s ease;
-    -webkit-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
 }
 
 .openingSection {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #2a2a2a;
-    z-index: 10;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2a2a2a;
+  z-index: 10;
 }
 
 .fullsite {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    z-index: 5;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 5;
 }
 
 .headerSection {
-    width: 100%;
-    height: 100%;
-    background-image: url(http://image.ibb.co/k25ULv/backgroundoffice_compressed.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 45%;
-    position: relative;
-    text-align: right;
+  width: 100%;
+  height: 100%;
+  background-image: url(./images/backgroundoffice_compressed.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 45%;
+  position: relative;
+  text-align: right;
 }
 
 .greyedout {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(33, 33, 33, 0.4);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 33, 33, 0.4);
 }
 
 .hidiv {
-    opacity: 0;
-    position: absolute;
-    top: 30%;
-    right: 0;
-    width: 100%;
-    text-align: center;
-    color: rgba(33, 33, 33, 0);
-    z-index: 15;
+  opacity: 0;
+  position: absolute;
+  top: 30%;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  color: rgba(33, 33, 33, 0);
+  z-index: 15;
 }
 
 .hidivDisplayed {
-    opacity: 1;
-    color: white !important;
-    text-shadow: 0px 0px 6px rgba(33, 33, 33, 0.4);
+  opacity: 1;
+  color: white !important;
+  text-shadow: 0px 0px 6px rgba(33, 33, 33, 0.4);
 }
 
 .hi {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 75px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 75px;
 }
 
 @media only screen and (max-width: 550px) {
-    .hi {
-        font-size: 50px;
-    }
+  .hi {
+    font-size: 50px;
+  }
 }
 
 .introPDiv {
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    text-align: center;
-    color: #2a2a2a;
-    font-size: 30px;
-    padding: 0px 20px;
-    z-index: 15;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #2a2a2a;
+  font-size: 30px;
+  padding: 0px 20px;
+  z-index: 15;
 }
 
 .introPDivDisplayed {
-    opacity: 1;
-    color: white !important;
-    text-shadow: 0px 0px 6px rgba(33, 33, 33, 0.4);
+  opacity: 1;
+  color: white !important;
+  text-shadow: 0px 0px 6px rgba(33, 33, 33, 0.4);
 }
 
 @media only screen and (max-width: 1050px) {
-    .introPDiv {
-        font-size: 24px;
-    }
+  .introPDiv {
+    font-size: 24px;
+  }
 }
 
 nav {
-    position: absolute;
-    height: 70px;
-    width: 100%;
-    text-align: center;
-    color: white;
-    font-size: 30px;
-    bottom: 0px;
-    background: linear-gradient(rgba(0, 0, 0, 0), #4b4b4b);
+  position: absolute;
+  height: 70px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  bottom: 0px;
+  background: linear-gradient(rgba(0, 0, 0, 0), #4b4b4b);
+}
+
+.aboutLink,
+.projectsLink,
+.techLink {
+  display: inline-block;
+  vertical-align: -webkit-baseline-middle;
+  margin: 0px 8%;
+  cursor: pointer;
+  font-size: 30px;
+  text-shadow: 0px 0px 8px black;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  opacity: 0;
 }
 
 .aboutLink, .projectsLink, .techLink {
@@ -149,31 +168,43 @@ nav {
     -moz-transition: all .5s ease;
     -o-transition: all .5s ease;
     opacity: 0;
+    position: relative;
+}
+
+.floating {
+  padding-bottom: 20px;
+
 }
 
 @media only screen and (max-width: 800px) {
-    .aboutLink, .projectsLink, .techLink {
-        font-size: 24px;
-    }
+  .aboutLink,
+  .projectsLink,
+  .techLink {
+    font-size: 24px;
+  }
 }
 
 @media only screen and (max-width: 630px) {
-    .aboutLink, .projectsLink, .techLink {
-        font-size: 24px;
-        margin: 0px 4%;
-    }
+  .aboutLink,
+  .projectsLink,
+  .techLink {
+    font-size: 24px;
+    margin: 0px 4%;
+  }
 }
 
 @media only screen and (max-width: 450px) {
-    .aboutLink, .projectsLink, .techLink {
-        font-size: 20px;
-        margin: 0px 4%;
-    }
+  .aboutLink,
+  .projectsLink,
+  .techLink {
+    font-size: 20px;
+    margin: 0px 4%;
+  }
 }
 
 .aboutMeSection {
-    text-align: center;
-    height: auto;
+  text-align: center;
+  height: auto;
 }
 
 .aboutMeDiv {
@@ -205,7 +236,7 @@ nav {
 }
 
 .portfolioSection {
-    color: white;
+  color: white;
 }
 
 .listOfPortfolioPieces {
@@ -242,15 +273,15 @@ nav {
 }
 
 .firstmemoriesLi {
-    background-color: #444;
+  background-color: #444;
 }
 
 .dinnerplansLi {
-    background-color: #333;
+  background-color: #333;
 }
 
 .concertfinderLi {
-    background-color: #222;
+  background-color: #222;
 }
 
 .piecePic, .pieceDescription {
@@ -262,8 +293,8 @@ nav {
 }
 
 .pieceTitle {
-    text-decoration: none;
-    font-size: 30px;
+  text-decoration: none;
+  font-size: 30px;
 }
 
 .triviabotTitle {
@@ -271,15 +302,15 @@ nav {
 }
 
 .firstMemoriesTitle {
-    color: #ffcb68;
+  color: #ffcb68;
 }
 
 .dinnerPlansTitle {
-    color: #fc6c27;
+  color: #fc6c27;
 }
 
 .concertFinderTitle {
-    color: #fa06fa;
+  color: #fa06fa;
 }
 
 .pieceDescription {
@@ -294,7 +325,7 @@ nav {
 }
 
 .dinnerplansdescriptionp {
-    padding-top: 10px;
+  padding-top: 10px;
 }
 
 .projectPics {
@@ -313,10 +344,10 @@ nav {
 }
 
 .technologySectionDesktop {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background-color: white;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: white;
 }
 
 .projectTechs>a {
@@ -330,19 +361,19 @@ nav {
 /*Mobile CSS*/
 
 .listItem {
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
 }
 
 .mongoList {
-    padding: 0px;
+  padding: 0px;
 }
 
 .bcryptlist {
-    height: 49px;
-    font-size: 38px;
-    padding-top: 0px;
+  height: 49px;
+  font-size: 38px;
+  padding-top: 0px;
 }
 
 .technologies {
@@ -355,7 +386,7 @@ nav {
 }
 
 .bcryptDiv {
-    width: 100%;
+  width: 100%;
 }
 
 .technologies>a {
@@ -372,37 +403,39 @@ nav {
 }
 
 @media only screen and (max-width: 800px) {
-    .click {
-        display: none;
-    }
-    .tap {
-        display: inline;
-    }
+  .click {
+    display: none;
+  }
+  .tap {
+    display: inline;
+  }
 }
 
-.frontendTechs, .backendTechs, .workflowTechs {
-    display: inline-block;
-    vertical-align: text-top;
-    width: 250px;
-    margin: 10px;
-    min-height: 450px;
-    transition: all .5s ease;
-    -webkit-transition: all .5s ease;
-    -ms-transition: all .5s ease;
-    -moz-transition: all .5s ease;
-    -o-transition: all .5s ease;
+.frontendTechs,
+.backendTechs,
+.workflowTechs {
+  display: inline-block;
+  vertical-align: text-top;
+  width: 250px;
+  margin: 10px;
+  min-height: 450px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
 }
 
 .frontendTechs {
-    border-bottom: 5px solid #1c88c8;
+  border-bottom: 5px solid #1c88c8;
 }
 
 .backendTechs {
-    border-bottom: 5px solid #7bd268;
+  border-bottom: 5px solid #7bd268;
 }
 
 .workflowTechs {
-    border-bottom: 5px solid #fff800;
+  border-bottom: 5px solid #fff800;
 }
 
 .frontendTechHeader, .backendTechHeader, .workflowTechHeader {
@@ -414,15 +447,15 @@ nav {
 }
 
 .frontendTechHeader {
-    border-bottom: 5px solid #1c88c8;
+  border-bottom: 5px solid #1c88c8;
 }
 
 .backendTechHeader {
-    border-bottom: 5px solid #7bd268;
+  border-bottom: 5px solid #7bd268;
 }
 
 .workflowTechHeader {
-    border-bottom: 5px solid #fff800;
+  border-bottom: 5px solid #fff800;
 }
 
 .javascriptDiv {
@@ -448,8 +481,8 @@ nav {
 }
 
 .reactDiv {
-    height: 100px;
-    background-image: url(http://image.ibb.co/eOzNY5/react.png);
+  height: 100px;
+  background-image: url(http://image.ibb.co/eOzNY5/react.png);
 }
 
 .githubDiv {
@@ -512,112 +545,112 @@ nav {
 }
 
 .contactSection {
-    background-color: grey;
-    position: relative;
-    width: 100%;
-    height: 150px;
+  background-color: grey;
+  position: relative;
+  width: 100%;
+  height: 150px;
 }
 
 .contactInfoDiv {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    overflow-x: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  overflow-x: hidden;
 }
 
 .wanttochat {
-    color: white;
-    font-size: 24px;
-    margin: 10px;
-    position: relative;
-    left: -200px;
-    transition: all 1s ease;
-    -webkit-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    opacity: 0;
+  color: white;
+  font-size: 24px;
+  margin: 10px;
+  position: relative;
+  left: -200px;
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  opacity: 0;
 }
 
 .slideInChat {
-    left: 0px;
-    opacity: 1;
+  left: 0px;
+  opacity: 1;
 }
 
 .linkedinDiv {
-    background-image: url(http://image.ibb.co/bO1PT5/linkedin_logo.png);
-    height: 35px;
-    width: 39px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    position: absolute;
-    display: inline-block;
-    left: -200px;
-    transition: all 1s ease;
-    -webkit-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    opacity: 0;
+  background-image: url(./images/linkedin_logo.png);
+  height: 35px;
+  width: 39px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  position: absolute;
+  display: inline-block;
+  left: -200px;
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  opacity: 0;
 }
 
 .slideInLinked {
-    left: 40px;
-    opacity: 1;
+  left: 40px;
+  opacity: 1;
 }
 
 .linkedinLink {
-    width: 100%;
-    height: 100%;
-    display: inline-block;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
 }
 
 .emailDiv {
-    width: 32px;
-    height: 31px;
-    color: white;
-    display: inline-block;
-    position: absolute;
-    left: -200px;
-    transition: all 1s ease;
-    -webkit-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    opacity: 0;
+  width: 32px;
+  height: 31px;
+  color: white;
+  display: inline-block;
+  position: absolute;
+  left: -200px;
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  opacity: 0;
 }
 
 .slideInEmail {
-    left: 100px;
-    opacity: 1;
+  left: 100px;
+  opacity: 1;
 }
 
 .emailaddress {
-    display: inline-block;
-    position: absolute;
-    left: 140px;
-    top: 70px;
-    color: white;
-    font-size: 20px;
-    transition: all 1s ease;
-    -webkit-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    opacity: 0;
+  display: inline-block;
+  position: absolute;
+  left: 140px;
+  top: 70px;
+  color: white;
+  font-size: 20px;
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  opacity: 0;
 }
 
 .slideInEmailAddress {
-    top: 52px;
-    opacity: 1;
+  top: 52px;
+  opacity: 1;
 }
 
-@media only screen and (max-width:500px) {
-    .emailaddress {
-        display: none;
-    }
+@media only screen and (max-width: 500px) {
+  .emailaddress {
+    display: none;
+  }
 }
 
 .projectTechs {
@@ -637,49 +670,49 @@ nav {
 }
 
 @media only screen and (max-width: 550px) {
-    .projectTechs {
-        height: 60px;
-        width: 60px;
-    }
+  .projectTechs {
+    height: 60px;
+    width: 60px;
+  }
 }
 
 .backToTop {
-    cursor: pointer;
-    padding: 10px;
-    position: absolute;
-    right: -200px;
-    top: 20px;
-    color: white;
-    font-size: 24px;
-    transition: all 1s ease;
-    -webkit-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  right: -200px;
+  top: 20px;
+  color: white;
+  font-size: 24px;
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
 }
 
 .backToTopShown {
-    right: 10px;
+  right: 10px;
 }
 
 @media only screen and (max-width: 550px) {
-    .backToTop {
-        text-align: center;
-        width: 100px;
-        top: 0px;
-    }
+  .backToTop {
+    text-align: center;
+    width: 100px;
+    top: 0px;
+  }
 }
 
 .copyright {
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    bottom: 5px;
-    color: white;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 5px;
+  color: white;
 }
 
 .shown {
-    opacity: 1;
+  opacity: 1;
 }
 
 .projectTechWrapper {
@@ -705,8 +738,8 @@ nav {
 }
 
 .shownTechSections {
-    top: 0px;
-    opacity: 1;
+  top: 0px;
+  opacity: 1;
 }
 
 /*Fixed background-image: cover issue on iOS*/
@@ -718,11 +751,11 @@ nav {
 }
 
 .aBackgroundInPeople {
-    width: 100%;
-    padding: 0px 9% 40px;
-    background-color: #555555;
-    position: relative;
-    min-height: 363px;
+  width: 100%;
+  padding: 0px 9% 40px;
+  background-color: #555555;
+  position: relative;
+  min-height: 363px;
 }
 
 .aBackgroundInPeopleHeader {
