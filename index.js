@@ -45,17 +45,17 @@ function scrollManager() {
 function chatSlideIn(){
     setInterval(function(){
 	    $('.wanttochat').addClass('slideInChat');
-    }, 200);
+    }, 0);
     setInterval(function(){
 	    $('.emailDiv').addClass('slideInEmail');
-    }, 600);
+    }, 400);
 
     setInterval(function(){
 	    $('.linkedinDiv').addClass('slideInLinked');
-    }, 1000);
+    }, 800);
     setInterval(function(){
 	    $('.emailaddress').addClass('slideInEmailAddress');
-    }, 1800);
+    }, 1600);
     setInterval(function(){
 	    $('.backToTop').addClass('backToTopShown');
     }, 400);
