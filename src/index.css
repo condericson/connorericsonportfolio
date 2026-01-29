@@ -1,0 +1,108 @@
+:root {
+  --font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  /* Light Theme */
+  --color-bg-light: #ffffff;
+  --color-text-light: #213547;
+  --color-accent-light: #646cff;
+  --color-secondary-light: #f9f9f9;
+  --color-highlight-light: #e0e7ff;
+  /* For text highlights */
+
+  /* Dark Theme */
+  --color-bg-dark: #242424;
+  --color-text-dark: rgba(255, 255, 255, 0.87);
+  --color-accent-dark: #747bff;
+  --color-secondary-dark: #1a1a1a;
+  --color-highlight-dark: rgba(116, 123, 255, 0.2);
+
+  /* Electric Theme (Crazy Neon) */
+  --color-bg-electric: #050505;
+  --color-text-electric: #e0e0e0;
+  --color-accent-electric: #ff00ff;
+  /* Hot Pink */
+  --color-secondary-electric: #090909;
+  --color-highlight-electric: rgba(255, 0, 255, 0.2);
+
+  /* Electric specific extras */
+  --electric-cyan: #0ff0fc;
+  --electric-lime: #ccff00;
+  --electric-purple: #bf00ff;
+
+  /* Default to Dark Theme */
+  --bg-color: var(--color-bg-dark);
+  --text-color: var(--color-text-dark);
+  --accent-color: var(--color-accent-dark);
+  --secondary-bg: var(--color-secondary-dark);
+  --highlight-bg: var(--color-highlight-dark);
+}
+
+[data-theme="light"] {
+  --bg-color: var(--color-bg-light);
+  --text-color: var(--color-text-light);
+  --accent-color: var(--color-accent-light);
+  --secondary-bg: var(--color-secondary-light);
+  --highlight-bg: var(--color-highlight-light);
+}
+
+[data-theme="electric"] {
+  --bg-color: var(--color-bg-electric);
+  --text-color: var(--color-text-electric);
+  --accent-color: var(--color-accent-electric);
+  --secondary-bg: var(--color-secondary-electric);
+  --highlight-bg: var(--color-highlight-electric);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: inherit;
+  transition: opacity 0.2s;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Custom Highlight Class */
+.highlight-text {
+  color: var(--accent-color);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-color);
+  text-underline-offset: 4px;
+  font-weight: 600;
+}
+
+[data-theme="electric"] .highlight-text {
+  text-shadow: 0 0 5px var(--accent-color);
+}

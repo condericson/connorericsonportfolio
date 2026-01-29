@@ -1,0 +1,85 @@
+.theme-dropdown-container {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.theme-toggle-main {
+    background: var(--bg-color);
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle-main:hover {
+    background-color: var(--secondary-bg);
+    box-shadow: 0 0 15px var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.theme-options-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.theme-option {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    pointer-events: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin-top: -20px;
+    margin-left: -20px;
+}
+
+.theme-option:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    transform: scale(1.1);
+}
+
+.theme-option.active {
+    border: 2px solid var(--accent-color);
+}
+
+/* Electric Theme Adjustments */
+[data-theme="electric"] .theme-toggle-main {
+    border-color: var(--electric-cyan);
+    box-shadow: 0 0 10px var(--electric-cyan);
+}
+
+[data-theme="electric"] .theme-toggle-main:hover {
+    background-color: #000;
+    color: var(--electric-lime);
+}
+
+[data-theme="electric"] .theme-option {
+    border: 1px solid var(--electric-purple);
+}
