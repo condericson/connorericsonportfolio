@@ -1,6 +1,7 @@
 import React from 'react';
 import ThemeToggle from './components/ThemeToggle';
 import Hero from './components/Hero';
+import PersonalInfo from './components/PersonalInfo';
 import WorkHistory from './components/WorkHistory';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
 
       <main>
         <Hero />
+        <PersonalInfo />
         <WorkHistory />
       </main>
     </div >

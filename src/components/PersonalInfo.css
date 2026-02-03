@@ -1,0 +1,205 @@
+.personal-info-section {
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
+    position: relative;
+}
+
+.personal-info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+/* Desktop Layout */
+@media (min-width: 900px) {
+    .personal-info-grid {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 2rem;
+        min-height: 500px;
+    }
+
+    .profile-image-container {
+        grid-column: 5 / 9;
+        grid-row: 1 / 3;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+    }
+
+    .drive-card {
+        grid-column: 1 / 5;
+        grid-row: 1;
+        text-align: right;
+    }
+
+    .family-card {
+        grid-column: 9 / 13;
+        grid-row: 1 / 3;
+        /* Spans slightly more vertical space */
+        align-self: center;
+    }
+
+    .hobbies-card {
+        grid-column: 1 / 5;
+        grid-row: 2;
+        text-align: right;
+    }
+}
+
+.image-wrapper {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--accent-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-card {
+    background: var(--secondary-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid transparent;
+    /* Prepare for border transition */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border-color: var(--accent-color);
+}
+
+.info-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+}
+
+.info-card p,
+.info-card ul {
+    color: var(--text-color);
+    line-height: 1.6;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.hobbies-list {
+    list-style: none;
+    padding: 0;
+}
+
+.hobbies-list li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* Align right on desktop to match card text align */
+}
+
+.hobbies-list li::before {
+    content: "•";
+    color: var(--accent-color);
+    margin-right: 0.5rem;
+    /* For mobile/default */
+    margin-left: 0.5rem;
+    /* For aligned right */
+    order: 1;
+    /* Move bullet to right for text-align: right */
+}
+
+@media (max-width: 899px) {
+    .hobbies-list li {
+        justify-content: flex-start;
+    }
+
+    .hobbies-list li::before {
+        order: 0;
+        margin-left: 0;
+        margin-right: 0.5rem;
+    }
+}
+
+
+.quote-container {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 2rem;
+    border-top: 1px solid var(--highlight-bg);
+}
+
+.quote-container blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* Electric Theme Overrides */
+[data-theme="electric"] .info-card {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid var(--electric-purple);
+    box-shadow: 0 0 10px var(--electric-purple), inset 0 0 10px rgba(191, 0, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+[data-theme="electric"] .info-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 40%, rgba(255, 0, 255, 0.1) 50%, transparent 60%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+[data-theme="electric"] .drive-card {
+    border-color: var(--electric-cyan);
+    box-shadow: 0 0 10px var(--electric-cyan);
+}
+
+[data-theme="electric"] .family-card {
+    border-color: var(--electric-lime);
+    box-shadow: 0 0 10px var(--electric-lime);
+}
+
+[data-theme="electric"] .hobbies-card {
+    border-color: var(--electric-pink);
+    /* Defined in index.css as #ff00ff */
+    box-shadow: 0 0 10px var(--electric-pink);
+}
+
+[data-theme="electric"] .image-wrapper {
+    border: 4px double var(--electric-cyan);
+    box-shadow: 0 0 30px var(--electric-cyan), 0 0 60px var(--electric-purple);
+    animation: electricPulse 3s infinite;
+}
+
+@keyframes electricPulse {
+    0% {
+        box-shadow: 0 0 20px var(--electric-cyan);
+    }
+
+    50% {
+        box-shadow: 0 0 40px var(--electric-purple), 0 0 80px var(--electric-pink);
+    }
+
+    100% {
+        box-shadow: 0 0 20px var(--electric-cyan);
+    }
+}

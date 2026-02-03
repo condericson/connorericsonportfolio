@@ -1,5 +1,5 @@
 .hero-section {
-    min-height: 60vh;
+    min-height: 45vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,4 +34,21 @@
     opacity: 0.8;
     max-width: 600px;
     line-height: 1.6;
+}
+
+/* Electric Theme Overrides */
+[data-theme="electric"] .title {
+    text-shadow: 3px 3px 0px var(--electric-purple), -3px -3px 0px var(--electric-cyan);
+}
+
+[data-theme="electric"] .greeting {
+    color: var(--electric-lime);
+    text-shadow: 0 0 10px var(--electric-lime);
+}
+
+[data-theme="electric"] .highlight {
+    background: linear-gradient(120deg, var(--electric-pink), var(--electric-cyan));
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
 }

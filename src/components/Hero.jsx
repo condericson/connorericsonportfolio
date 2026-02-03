@@ -1,8 +1,28 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import './Hero.css';
 
 const Hero = () => {
+    const [index, setIndex] = React.useState(0);
+    const titles = [
+        "User Experiences",
+        "Data Flows",
+        "Business Solutions",
+        "Secure APIs",
+        "Testable Code",
+        "Shared Components",
+        "Authentication Flows",
+        "CI/CD Pipelines",
+        "Architecture Diagrams",
+        "Efficient Teams"
+    ];
+
+    React.useEffect(() => {
+        const timer = setInterval(() => {
+            setIndex((prev) => (prev + 1) % titles.length);
+        }, 1500);
+        return () => clearInterval(timer);
+    }, []);
     const container = {
         hidden: { opacity: 0 },
         show: {
@@ -27,11 +47,23 @@ const Hero = () => {
                 animate="show"
             >
                 <motion.h2 variants={item} className="greeting">
-                    Hello, I'm Connor Ericson
+                    Hey, I'm Connor
                 </motion.h2>
                 <motion.h1 variants={item} className="title">
-                    Building <span className="highlight">Digital Experiences</span><br />
-                    That Matter.
+                    I build{' '}
+                    <AnimatePresence mode="wait">
+                        <motion.span
+                            key={titles[index]}
+                            className="highlight"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
+                            transition={{ duration: 0.3 }}
+                            style={{ display: 'inline-block' }}
+                        >
+                            {titles[index]}
+                        </motion.span>
+                    </AnimatePresence>
                 </motion.h1>
                 <motion.p variants={item} className="subtitle">
                     9 Years Experience • Full Stack Developer • Creative Problem Solver

@@ -19,15 +19,17 @@
   /* Electric Theme (Crazy Neon) */
   --color-bg-electric: #050505;
   --color-text-electric: #e0e0e0;
-  --color-accent-electric: #ff00ff;
-  /* Hot Pink */
+
+  /* Vibrant Electric Palette */
+  --electric-cyan: #0ff0fc;
+  --electric-pink: #ff00ff;
+  --electric-purple: #bf00ff;
+  --electric-lime: #ccff00;
+
+  --color-accent-electric: var(--electric-pink);
+  /* Primary accent */
   --color-secondary-electric: #090909;
   --color-highlight-electric: rgba(255, 0, 255, 0.2);
-
-  /* Electric specific extras */
-  --electric-cyan: #0ff0fc;
-  --electric-lime: #ccff00;
-  --electric-purple: #bf00ff;
 
   /* Default to Dark Theme */
   --bg-color: var(--color-bg-dark);
@@ -51,6 +53,22 @@
   --accent-color: var(--color-accent-electric);
   --secondary-bg: var(--color-secondary-electric);
   --highlight-bg: var(--color-highlight-electric);
+}
+
+/* Electric Theme Global Overrides */
+[data-theme="electric"] body {
+  background-image:
+    linear-gradient(rgba(191, 0, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(191, 0, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center center;
+}
+
+[data-theme="electric"] h1,
+[data-theme="electric"] h2,
+[data-theme="electric"] h3 {
+  text-shadow: 2px 2px 0px var(--electric-cyan), -2px -2px 0px var(--electric-purple);
+  letter-spacing: 1px;
 }
 
 html,
