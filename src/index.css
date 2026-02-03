@@ -67,7 +67,7 @@
 [data-theme="electric"] h1,
 [data-theme="electric"] h2,
 [data-theme="electric"] h3 {
-  text-shadow: 2px 2px 0px var(--electric-cyan), -2px -2px 0px var(--electric-purple);
+  text-shadow: 1px 2px 0px var(--electric-cyan), -2px -2px 0px var(--electric-purple);
   letter-spacing: 1px;
 }
 

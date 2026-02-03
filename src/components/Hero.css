@@ -38,7 +38,7 @@
 
 /* Electric Theme Overrides */
 [data-theme="electric"] .title {
-    text-shadow: 3px 3px 0px var(--electric-purple), -3px -3px 0px var(--electric-cyan);
+    text-shadow: 5px 2px 0px var(--electric-purple), -3px -3px 0px var(--electric-cyan);
 }
 
 [data-theme="electric"] .greeting {
