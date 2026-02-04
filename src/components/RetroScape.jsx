@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './RetroScape.css';
+import retroLandscape from '../assets/images/minimalist_80s_retro.png';
 
 const RetroScape = () => {
     const [scrollY, setScrollY] = useState(0);
@@ -42,10 +43,8 @@ const RetroScape = () => {
             </div>
 
             {/* Bottom Landscape Layer */}
-            <div className="retro-landscape-layer" style={{ transform: `translateY(${Math.max(0, 300 - scrollY * 0.5)}px)` }}>
-                <div className="retro-sun"></div>
-                <div className="retro-grid"></div>
-                <div className="mountain-range"></div>
+            <div className="retro-landscape-layer" style={{ transform: `translateY(${Math.max(0, 400 - scrollY * 0.8)}px)` }}>
+                <img src={retroLandscape} alt="Retro 80s Landscape" className="retro-landscape-img" />
             </div>
         </div>
     );

@@ -68,7 +68,6 @@ export const WORK_HISTORY = [
         skills: {
             technologies: ['Web Fundamentals'],
             languages: ['JavaScript', 'HTML', 'CSS'],
-            workflow: ['Education']
         }
     }
 ];

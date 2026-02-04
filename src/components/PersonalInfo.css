@@ -138,6 +138,7 @@
     margin-top: 4rem;
     padding: 2rem;
     border-top: 1px solid var(--highlight-bg);
+    border-bottom: 1px solid var(--highlight-bg);
 }
 
 .quote-container blockquote {

@@ -57,11 +57,8 @@
 
 /* Electric Theme Global Overrides */
 [data-theme="electric"] body {
-  background-image:
-    linear-gradient(rgba(191, 0, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(191, 0, 255, 0.05) 1px, transparent 1px);
-  background-size: 50px 50px;
-  background-position: center center;
+  background: linear-gradient(to bottom, var(--color-bg-electric), rgb(15, 9, 26));
+  background-attachment: fixed;
 }
 
 [data-theme="electric"] h1,

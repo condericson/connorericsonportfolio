@@ -9,13 +9,13 @@ const Hero = () => {
     React.useEffect(() => {
         const titleList = [
             "User Experiences",
-            "Data Flows",
+            "Data Pipelines",
             "Business Solutions",
             "Secure APIs",
             "Testable Code",
             "Shared Components",
             "Authentication Flows",
-            "CI/CD Pipelines",
+            "CI/CD Infrastructure",
             "Scalable Architecture",
             "Efficient Teams"
         ];
@@ -60,7 +60,7 @@ const Hero = () => {
                 animate="show"
             >
                 <motion.h2 variants={item} className="greeting">
-                    Hey, I'm Connor
+                    Hi, I'm Connor
                 </motion.h2>
                 <motion.h1 variants={item} className="title">
                     I build{' '}

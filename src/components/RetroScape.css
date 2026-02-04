@@ -4,7 +4,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 0;
+    /* Changed from -1 to 0 to be visible above body bg */
     pointer-events: none;
     overflow: hidden;
 }
@@ -33,60 +34,66 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 100px;
+    width: 150px;
     height: 2px;
-    background: linear-gradient(90deg, #fff, transparent);
+    background: linear-gradient(270deg, #fff, transparent);
     right: 0;
     /* Trail behind */
 }
 
 /* Animations for shooting stars */
-/* Top Left to Bottom Right */
+/* Fast shoot (2s duration visible) then wait */
 @keyframes shoot {
     0% {
-        transform: translate(-100px, -100px) rotate(45deg) scale(0);
+        transform: translate(-100px, -100px) rotate(45deg) scale(0.5);
         opacity: 0;
     }
 
-    10% {
+    5% {
         opacity: 1;
-        transform: translate(0, 0) rotate(45deg) scale(1);
+    }
+
+    20% {
+        transform: translate(150vw, 150vh) rotate(45deg) scale(1.2);
+        opacity: 0;
     }
 
     100% {
-        transform: translate(120vw, 120vh) rotate(45deg) scale(1);
+        transform: translate(150vw, 150vh) rotate(45deg) scale(1);
         opacity: 0;
     }
 }
 
+/* Timings for "every 10 seconds or so" */
+/* Total duration 12s, 15s, etc. with offsets */
 .star-1 {
     top: 0;
-    left: 20%;
-    animation: shoot 4s infinite linear 0s;
+    left: 10%;
+    animation: shoot 12s infinite linear 0s;
 }
 
 .star-2 {
     top: 10%;
-    left: 0;
-    animation: shoot 5s infinite linear 2s;
+    left: 30%;
+    animation: shoot 14s infinite linear 5s;
 }
 
 .star-3 {
-    top: -10%;
-    left: 50%;
-    animation: shoot 6s infinite linear 1s;
+    top: -5%;
+    left: 60%;
+    animation: shoot 11s infinite linear 8s;
 }
 
 .star-4 {
-    top: 20%;
-    left: -20%;
-    animation: shoot 7s infinite linear 3.5s;
+    top: 15%;
+    left: 80%;
+    animation: shoot 15s infinite linear 2s;
 }
 
 .star-5 {
-    top: -20%;
-    left: 80%;
-    animation: shoot 5s infinite linear 0.5s;
+    top: 30%;
+    left: 0%;
+    animation: shoot 13s infinite linear 10s;
 }
 
 
