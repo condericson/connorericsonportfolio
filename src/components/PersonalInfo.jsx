@@ -1,10 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './PersonalInfo.css';
+import profileImage from '../assets/images/Connor-headshot.jpg';
 
 const PersonalInfo = () => {
-    // Placeholder image
-    const profileImage = "https://via.placeholder.com/300x300?text=Connor+Ericson";
 
     const container = {
         hidden: { opacity: 0 },
@@ -62,12 +61,10 @@ const PersonalInfo = () => {
                 {/* Hobbies Section (Bottom Left) */}
                 <motion.div className="info-card hobbies-card" variants={item}>
                     <h3>Hobbies</h3>
-                    <ul className="hobbies-list">
-                        <li>Off-roading</li>
-                        <li>Magic: The Gathering</li>
-                        <li>Steam Deck Gaming</li>
-                        <li>Discovering the world with my kids</li>
-                    </ul>
+                    <p>
+                        When I'm not coding, I love exploring the outdoors <strong>off-roading</strong> or getting lost in a game of <strong>Magic: The Gathering</strong>.
+                        You can also find me gaming on my <strong>Steam Deck</strong>, but my favorite pastime is simply <strong>discovering the world</strong> anew through the eyes of my kids.
+                    </p>
                 </motion.div>
 
             </motion.div>
@@ -80,6 +77,7 @@ const PersonalInfo = () => {
                 viewport={{ once: true }}
             >
                 <blockquote>"In a world where you can be anything, be kind"</blockquote>
+                <div className="quote-separator"></div>
             </motion.div>
         </section>
     );

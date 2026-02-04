@@ -71,22 +71,13 @@ const WorkHistory = () => {
                     <motion.div
                         key={job.id}
                         className="history-card-container"
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.1, duration: 0.5 }}
                     >
-                        {/* Graphic Column (Desktop) */}
-                        <div className="graphic-column">
-                            <GraphicElement type={job.id.includes('datascan') ? 'datascan' : job.id.includes('aarons') ? 'aarons' : 'other'} />
-                        </div>
-
+                        {/* Simplified Content Only */}
                         <div className="history-card">
-                            {/* Mobile Graphic Background implemented in CSS via class */}
-                            <div className="card-header-bg">
-                                <GraphicElement type={job.id.includes('datascan') ? 'datascan' : job.id.includes('aarons') ? 'aarons' : 'other'} />
-                            </div>
-
                             <div className="card-header">
                                 <div className="role-company">
                                     <h4>{job.role}</h4>
@@ -119,47 +110,39 @@ const WorkHistory = () => {
                                     ))}
                                 </div>
 
-                                {/* Skills Grid - Compact */}
-                                <div className="skills-container-compact">
+                                {/* Skills Grid - Clean */}
+                                <div className="skills-container-clean">
                                     {/* Technologies */}
-                                    <div className="skill-group-compact">
+                                    <div className="skill-group-clean">
                                         <div className="skill-label">
-                                            <Code size={14} /> <span>Technologies</span>
+                                            <Code size={16} /> <span>Technologies</span>
                                         </div>
-                                        <div className="tags-compact">
+                                        <div className="tags-clean">
                                             {job.skills.technologies?.map(tech => (
-                                                <span key={tech} className="tech-tag">{tech}</span>
+                                                <span key={tech} className="tech-tag-major">{tech}</span>
                                             ))}
                                         </div>
                                     </div>
 
-                                    {/* Languages */}
-                                    {job.skills.languages?.length > 0 && (
-                                        <div className="skill-group-compact">
-                                            <div className="skill-label">
-                                                <Terminal size={14} /> <span>Languages</span>
-                                            </div>
-                                            <div className="tags-compact">
+                                    {/* Additional Skills (Languages/Workflow) */}
+                                    <div className="secondary-skills">
+                                        {job.skills.languages?.length > 0 && (
+                                            <div className="skill-subgroup">
+                                                <span className="sub-label">Languages:</span>
                                                 {job.skills.languages.map(lang => (
-                                                    <span key={lang} className="lang-tag">{lang}</span>
+                                                    <span key={lang} className="sub-tag">{lang}</span>
                                                 ))}
                                             </div>
-                                        </div>
-                                    )}
-
-                                    {/* Workflow */}
-                                    {job.skills.workflow?.length > 0 && (
-                                        <div className="skill-group-compact">
-                                            <div className="skill-label">
-                                                <Layers size={14} /> <span>Workflow</span>
-                                            </div>
-                                            <div className="tags-compact">
+                                        )}
+                                        {job.skills.workflow?.length > 0 && (
+                                            <div className="skill-subgroup">
+                                                <span className="sub-label">Workflow:</span>
                                                 {job.skills.workflow.map(tool => (
-                                                    <span key={tool} className="workflow-tag">{tool}</span>
+                                                    <span key={tool} className="sub-tag">{tool}</span>
                                                 ))}
                                             </div>
-                                        </div>
-                                    )}
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                         </div>

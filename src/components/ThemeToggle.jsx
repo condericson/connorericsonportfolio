@@ -3,20 +3,16 @@ import { Moon, Sun, Zap, Palette } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './ThemeToggle.css';
 
-export default function ThemeToggle() {
-  const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('theme') || 'dark';
-  });
+export default function ThemeToggle({ currentTheme, onThemeChange }) {
+  // Theme state moved to parent (App.jsx)
+
   const [isOpen, setIsOpen] = useState(false);
   const timeoutRef = React.useRef(null);
 
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-  }, [theme]);
+  // useEffect for document attribute is also moved to parent to ensure single source of truth
 
   const selectTheme = (newTheme) => {
-    setTheme(newTheme);
+    onThemeChange(newTheme);
     setIsOpen(false);
   };
 
@@ -51,7 +47,7 @@ export default function ThemeToggle() {
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Theme menu"
       >
-        {getIcon(theme)}
+        {getIcon(currentTheme)}
       </button>
 
       <AnimatePresence>
@@ -60,7 +56,7 @@ export default function ThemeToggle() {
             {/* Triangular Fan-out */}
             {/* 1. Dark (Bottom Left) */}
             <motion.button
-              className={`theme-option ${theme === 'dark' ? 'active' : ''}`}
+              className={`theme-option ${currentTheme === 'dark' ? 'active' : ''}`}
               initial={{ opacity: 0, x: 0, y: 0 }}
               animate={{ opacity: 1, x: -45, y: 30 }}
               exit={{ opacity: 0, x: 0, y: 0 }}
@@ -73,7 +69,7 @@ export default function ThemeToggle() {
 
             {/* 2. Light (Bottom Right) */}
             <motion.button
-              className={`theme-option ${theme === 'light' ? 'active' : ''}`}
+              className={`theme-option ${currentTheme === 'light' ? 'active' : ''}`}
               initial={{ opacity: 0, x: 0, y: 0 }}
               animate={{ opacity: 1, x: 45, y: 30 }}
               exit={{ opacity: 0, x: 0, y: 0 }}
@@ -86,7 +82,7 @@ export default function ThemeToggle() {
 
             {/* 3. Electric (Bottom Center - Lower) */}
             <motion.button
-              className={`theme-option ${theme === 'electric' ? 'active' : ''}`}
+              className={`theme-option ${currentTheme === 'electric' ? 'active' : ''}`}
               initial={{ opacity: 0, x: 0, y: 0 }}
               animate={{ opacity: 1, x: 0, y: 60 }}
               exit={{ opacity: 0, x: 0, y: 0 }}

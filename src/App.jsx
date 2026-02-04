@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ThemeToggle from './components/ThemeToggle';
 import Hero from './components/Hero';
 import PersonalInfo from './components/PersonalInfo';
 import WorkHistory from './components/WorkHistory';
+import RetroScape from './components/RetroScape';
 
 function App() {
+  // Lifted state from ThemeToggle
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('theme') || 'dark';
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
   return (
     <div className="app-container" style={{ padding: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
       <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4rem' }}>
@@ -14,8 +25,11 @@ function App() {
             condericson@gmail.com
           </a>
         </div>
-        <ThemeToggle /> {/* It is fixed position now, but keeping it in DOM */}
+        <ThemeToggle currentTheme={theme} onThemeChange={setTheme} />
       </header>
+
+      {/* Conditionally render RetroScape for performance */}
+      {theme === 'electric' && <RetroScape />}
 
       <main>
         <Hero />

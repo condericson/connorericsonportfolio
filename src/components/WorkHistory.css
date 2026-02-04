@@ -1,8 +1,218 @@
 .work-history-section {
     padding: 4rem 0;
-    max-width: 1000px;
-    /* Increased max width for side-by-side graphic */
+    max-width: 900px;
     margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.history-card-container {
+    display: block;
+    width: 100%;
+}
+
+.history-card {
+    background: var(--secondary-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 1rem;
+}
+
+.role-company h4 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.company-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.meta-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    align-items: flex-end;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.duration-text {
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+/* Narrative Styles */
+.narrative-text {
+    color: var(--text-color);
+    opacity: 0.9;
+    line-height: 1.7;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.narrative-text p {
+    margin-bottom: 0.75rem;
+}
+
+.narrative-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Clean Skills Grid */
+.skills-container-clean {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 1.5rem;
+}
+
+.skill-group-clean {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.skill-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-color);
+    opacity: 0.7;
+    margin-bottom: 0.25rem;
+}
+
+.tags-clean {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.tech-tag-major {
+    background: var(--accent-color);
+    color: var(--bg-color);
+    /* Contrast text */
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.tech-tag-major:hover {
+    transform: translateY(-2px);
+}
+
+/* Secondary Skills */
+.secondary-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    font-size: 0.95rem;
+    color: var(--text-color);
+}
+
+.skill-subgroup {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sub-label {
+    font-weight: 600;
+    opacity: 0.7;
+    margin-right: 0.5rem;
+}
+
+.sub-tag {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .meta-info {
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 0.5rem;
+        gap: 1rem;
+    }
+
+    .meta-item {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+    }
+}
+
+/* Electric Theme Updates */
+[data-theme="electric"] .tech-tag-major {
+    background: transparent;
+    color: var(--electric-lime);
+    border: 1px solid var(--electric-lime);
+    box-shadow: 0 0 5px var(--electric-lime);
+    text-shadow: 0 0 5px var(--electric-lime);
+}
+
+[data-theme="electric"] .tech-tag-major:hover {
+    background: var(--electric-lime);
+    color: #000;
+    box-shadow: 0 0 15px var(--electric-lime);
+}
+
+[data-theme="electric"] .section-title {
+    border-color: var(--electric-cyan);
+    text-shadow: 2px 2px 0 var(--electric-purple);
 }
 
 .section-title {

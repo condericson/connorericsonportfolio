@@ -4,25 +4,38 @@ import './Hero.css';
 
 const Hero = () => {
     const [index, setIndex] = React.useState(0);
-    const titles = [
-        "User Experiences",
-        "Data Flows",
-        "Business Solutions",
-        "Secure APIs",
-        "Testable Code",
-        "Shared Components",
-        "Authentication Flows",
-        "CI/CD Pipelines",
-        "Architecture Diagrams",
-        "Efficient Teams"
-    ];
+    const [titles, setTitles] = React.useState([]);
 
     React.useEffect(() => {
+        const titleList = [
+            "User Experiences",
+            "Data Flows",
+            "Business Solutions",
+            "Secure APIs",
+            "Testable Code",
+            "Shared Components",
+            "Authentication Flows",
+            "CI/CD Pipelines",
+            "Scalable Architecture",
+            "Efficient Teams"
+        ];
+
+        // Randomize
+        for (let i = titleList.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [titleList[i], titleList[j]] = [titleList[j], titleList[i]];
+        }
+        setTitles(titleList);
+    }, []);
+
+    React.useEffect(() => {
+        if (titles.length === 0) return;
         const timer = setInterval(() => {
             setIndex((prev) => (prev + 1) % titles.length);
-        }, 1500);
+        }, 3000);
         return () => clearInterval(timer);
-    }, []);
+    }, [titles]);
+
     const container = {
         hidden: { opacity: 0 },
         show: {
@@ -52,21 +65,23 @@ const Hero = () => {
                 <motion.h1 variants={item} className="title">
                     I build{' '}
                     <AnimatePresence mode="wait">
-                        <motion.span
-                            key={titles[index]}
-                            className="highlight"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -20 }}
-                            transition={{ duration: 0.3 }}
-                            style={{ display: 'inline-block' }}
-                        >
-                            {titles[index]}
-                        </motion.span>
+                        {titles.length > 0 && (
+                            <motion.span
+                                key={titles[index]}
+                                className="highlight"
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -20 }}
+                                transition={{ duration: 0.3 }}
+                                style={{ display: 'inline-block' }}
+                            >
+                                {titles[index]}
+                            </motion.span>
+                        )}
                     </AnimatePresence>
                 </motion.h1>
                 <motion.p variants={item} className="subtitle">
-                    9 Years Experience • Full Stack Developer • Creative Problem Solver
+                    9+ Years Experience • Full Stack Developer • Creative Problem Solver
                 </motion.p>
 
                 <motion.div variants={item} className="cta-container">
