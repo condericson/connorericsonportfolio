@@ -5,7 +5,6 @@
     width: 100%;
     height: 100%;
     z-index: 0;
-    /* Changed from -1 to 0 to be visible above body bg */
     pointer-events: none;
     overflow: hidden;
 }
@@ -16,7 +15,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 60%;
+    height: 100%;
+    /* Traverse full height */
 }
 
 .star {
@@ -34,18 +34,23 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 150px;
+    width: 200px;
+    /* Long trail */
     height: 2px;
-    background: linear-gradient(270deg, #fff, transparent);
+    /* Gradient from Right (White head) to Left (Transparent tail) */
+    background: linear-gradient(to left, #fff, transparent);
     right: 0;
-    /* Trail behind */
+    /* Anchored to star */
 }
 
 /* Animations for shooting stars */
-/* Fast shoot (2s duration visible) then wait */
+/* 
+   Using vmax ensures the X and Y translation distance is identical regardless of aspect ratio.
+   150vmax ensures it covers the screen diagonally.
+*/
 @keyframes shoot {
     0% {
-        transform: translate(-100px, -100px) rotate(45deg) scale(0.5);
+        transform: translate(-50vmax, -50vmax) rotate(45deg) scale(0.5);
         opacity: 0;
     }
 
@@ -54,18 +59,20 @@
     }
 
     20% {
-        transform: translate(150vw, 150vh) rotate(45deg) scale(1.2);
+        /* Move diagonally by equal amounts */
+        transform: translate(100vmax, 100vmax) rotate(45deg) scale(1.2);
         opacity: 0;
     }
 
     100% {
-        transform: translate(150vw, 150vh) rotate(45deg) scale(1);
+        transform: translate(100vmax, 100vmax) rotate(45deg) scale(1);
         opacity: 0;
     }
 }
 
-/* Timings for "every 10 seconds or so" */
-/* Total duration 12s, 15s, etc. with offsets */
+/* Timings */
+/* Timings & Positions */
+/* Group 1 */
 .star-1 {
     top: 0;
     left: 10%;
@@ -96,64 +103,96 @@
     animation: shoot 13s infinite linear 10s;
 }
 
+/* Group 2 (New) */
+.star-6 {
+    top: 5%;
+    left: 45%;
+    animation: shoot 13s infinite linear 1s;
+}
 
-/* --- Landscape & Sun --- */
+.star-7 {
+    top: 25%;
+    left: 15%;
+    animation: shoot 16s infinite linear 6s;
+}
+
+.star-8 {
+    top: -2%;
+    left: 90%;
+    animation: shoot 10s infinite linear 3s;
+}
+
+.star-9 {
+    top: 35%;
+    left: 70%;
+    animation: shoot 14s infinite linear 9s;
+}
+
+.star-10 {
+    top: 18%;
+    left: 55%;
+    animation: shoot 12s infinite linear 11s;
+}
+
+/* Group 3 (New) */
+.star-11 {
+    top: 8%;
+    left: 25%;
+    animation: shoot 15s infinite linear 4s;
+}
+
+.star-12 {
+    top: 40%;
+    left: 5%;
+    animation: shoot 11s infinite linear 7s;
+}
+
+.star-13 {
+    top: 12%;
+    left: 75%;
+    animation: shoot 17s infinite linear 1s;
+}
+
+.star-14 {
+    top: 22%;
+    left: 35%;
+    animation: shoot 13s infinite linear 12s;
+}
+
+.star-15 {
+    top: -8%;
+    left: 50%;
+    animation: shoot 10s infinite linear 6.5s;
+}
+
+
+/* --- Landscape Image --- */
 .retro-landscape-layer {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    /* Will be translatedY down initially by JS */
+
+    /* Transformation handled by JS (parallax) */
+    .inset-gradient {
+        position: absolute;
+        top: 0;
+        height: 16%;
+        width: 100%;
+        background: linear-gradient(to top, transparent, var(--bg-color));
+    }
 }
 
-.retro-sun {
-    position: absolute;
-    bottom: 0;
-    /* Stick to horizon */
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    background: linear-gradient(to top, var(--electric-pink), yellow);
-    box-shadow: 0 0 50px var(--electric-pink);
-    mask-image: linear-gradient(to bottom, black 50%, transparent 50%);
-    mask-size: 100% 20px;
-    /* create slats */
-    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 50%);
-    -webkit-mask-size: 100% 20px;
-}
-
-.retro-grid {
-    position: absolute;
-    bottom: 0;
-    width: 200%;
-    height: 300px;
-    background-image:
-        linear-gradient(var(--electric-purple) 1px, transparent 1px),
-        linear-gradient(90deg, var(--electric-purple) 1px, transparent 1px);
-    background-size: 40px 40px;
-    transform: perspective(300px) rotateX(60deg) translateY(100px);
-    transform-origin: bottom center;
-    opacity: 0.8;
-    box-shadow: 0 -50px 100px var(--electric-purple) inset;
-}
-
-.mountain-range {
-    /* Optional sleek mountains */
-    position: absolute;
-    bottom: 100px;
-    /* Above grid */
+.retro-landscape-img {
     width: 100%;
-    height: 100px;
-    background:
-        linear-gradient(135deg, transparent 50%, #000 50%),
-        linear-gradient(225deg, transparent 50%, #000 50%);
-    background-size: 200px 100px;
-    z-index: 2;
-    /* In front of sun */
-    display: none;
-    /* Keeping it simple for now, sun+grid is core retro */
+    /* Ensure it covers full width depending on aspect ratio preference. 
+       If user wants full width always: width: 100%; height: auto;
+    */
+    height: auto;
+    display: block;
+    /* Optional: mask to fade top edge if needed, but background gradient handles it */
+    user-select: none;
 }

@@ -1,0 +1,49 @@
+.portfolio-footer {
+    height: 1000px;
+    /* Large height to allow background to be seen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Content at top */
+    padding-top: 4rem;
+    position: relative;
+    z-index: 1;
+    /* Above fixed background */
+    background: transparent;
+    /* Transparent so RetroScape shows through */
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Ensure readability against busy background */
+}
+
+.footer-email {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.footer-email:hover {
+    opacity: 0.8;
+    text-shadow: 0 0 10px var(--accent-color);
+}
+
+/* Electric Theme enhancements */
+[data-theme="electric"] .footer-content h2 {
+    text-shadow: 2px 2px 0 var(--electric-purple);
+}
+
+[data-theme="electric"] .footer-email {
+    color: var(--electric-cyan);
+    text-shadow: 0 0 5px var(--electric-cyan);
+}

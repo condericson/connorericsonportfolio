@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './PersonalInfo.css';
-import profileImage from '../assets/images/Connor-headshot.jpg';
+import profileImage from '../assets/images/Connor-headshot-2.jpg';
 
 const PersonalInfo = () => {
 

@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import PersonalInfo from './components/PersonalInfo';
 import WorkHistory from './components/WorkHistory';
 import RetroScape from './components/RetroScape';
+import Footer from './components/Footer';
 
 function App() {
   // Lifted state from ThemeToggle
@@ -35,6 +36,7 @@ function App() {
         <Hero />
         <PersonalInfo />
         <WorkHistory />
+        <Footer />
       </main>
     </div >
   );
