@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import ThemeToggle from './components/ThemeToggle';
 import Hero from './components/Hero';
-import PersonalInfo from './components/PersonalInfo';
+import HeadshotSkills from './components/HeadshotSkills';
+import AboutMe from './components/AboutMe';
 import WorkHistory from './components/WorkHistory';
 import RetroScape from './components/RetroScape';
 import Footer from './components/Footer';
@@ -34,8 +35,9 @@ function App() {
 
       <main style={{ position: 'relative', zIndex: 1 }}>
         <Hero />
-        <PersonalInfo />
+        <HeadshotSkills />
         <WorkHistory />
+        <AboutMe />
         <Footer />
       </main>
     </div >

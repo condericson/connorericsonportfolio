@@ -1,0 +1,93 @@
+.about-me-section {
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+.about-me-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.about-card {
+    background: var(--secondary-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    height: 100%;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border-color: var(--accent-color);
+}
+
+.about-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.about-card p {
+    color: var(--text-color);
+    line-height: 1.7;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.quote-container {
+    text-align: center;
+    margin-top: 5rem;
+    padding: 2rem;
+    border-top: 1px solid var(--highlight-bg);
+    border-bottom: 1px solid var(--highlight-bg);
+}
+
+.quote-container blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--text-color);
+    margin: 0;
+    font-family: serif;
+}
+
+/* Electric Theme Overrides */
+[data-theme="electric"] .about-card {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--electric-purple);
+    box-shadow: 0 0 10px rgba(191, 0, 255, 0.3);
+}
+
+[data-theme="electric"] .about-card:hover {
+    box-shadow: 0 0 20px var(--electric-purple);
+}
+
+[data-theme="electric"] .drive-card h3 {
+    color: var(--electric-cyan);
+    text-shadow: 0 0 5px var(--electric-cyan);
+}
+
+[data-theme="electric"] .family-card h3 {
+    color: var(--electric-lime);
+    text-shadow: 0 0 5px var(--electric-lime);
+}
+
+[data-theme="electric"] .hobbies-card h3 {
+    color: var(--electric-pink);
+    text-shadow: 0 0 5px var(--electric-pink);
+}
+
+[data-theme="electric"] .section-title {
+    text-shadow: 3px 3px 0px var(--electric-purple);
+}

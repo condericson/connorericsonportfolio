@@ -1,0 +1,306 @@
+/* Container */
+.headshot-skills-wrapper {
+    position: relative;
+    width: 100%;
+    /* Desktop height should be constrained */
+    min-height: 800px;
+    overflow: hidden;
+    margin-bottom: 4rem;
+}
+
+/* Colors Variables */
+:root {
+    --color-frontend: #0ff0fc;
+    /* Cyan */
+    --color-backend: #bd00ff;
+    /* Purple */
+    --color-workflow: #ffaa00;
+    /* Orange/Amber */
+}
+
+[data-theme="electric"] {
+    --color-frontend: var(--electric-cyan);
+    --color-backend: var(--electric-purple);
+    --color-workflow: var(--electric-pink);
+}
+
+/* =========================================
+   DESKTOP LAYOUT 
+   ========================================= */
+.hs-desktop {
+    display: none;
+    /* Hidden by default, explicit enabling in media query */
+    position: relative;
+    width: 100%;
+    height: 800px;
+}
+
+/* Profile Center */
+.hs-profile-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    background: var(--bg-color);
+    padding: 10px;
+}
+
+.hs-profile-center img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--accent-color);
+}
+
+/* Sections Grid/Positions */
+.hs-section {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    box-sizing: border-box;
+}
+
+.hs-section h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.9;
+}
+
+.hs-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.hs-tag {
+    padding: 0.5rem 1rem;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    background: var(--bg-color);
+    /* Same as website bg */
+    backdrop-filter: blur(5px);
+    transition: transform 0.2s;
+}
+
+.hs-tag:hover {
+    transform: scale(1.1);
+}
+
+/* --- Quadrant Specifics --- */
+
+/* Top Left: Front End */
+.hs-top-left {
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-right: 150px;
+    /* Space for headshot */
+    padding-bottom: 50px;
+
+    /* Radial Gradient: Transparent at Bottom-Right (Center), Color at Top-Left */
+    /* "fade in opacity as the gradient travels outwards" -> start transparent near center */
+    background: radial-gradient(circle at 100% 100%, transparent 20%, rgba(15, 240, 252, 0.2) 80%);
+}
+
+.hs-top-left h3 {
+    color: var(--color-frontend);
+    text-align: left;
+}
+
+.hs-top-left .hs-tag {
+    border-color: var(--color-frontend);
+    color: var(--color-frontend);
+}
+
+/* Top Right: Back End */
+.hs-top-right {
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-left: 150px;
+    /* Space for headshot */
+    padding-bottom: 50px;
+
+    /* Radial Gradient: Transparent at Bottom-Left (Center) */
+    background: radial-gradient(circle at 0% 100%, transparent 20%, rgba(189, 0, 255, 0.2) 80%);
+}
+
+.hs-top-right h3 {
+    color: var(--color-backend);
+    text-align: right;
+}
+
+.hs-top-right .hs-tags {
+    justify-content: flex-end;
+}
+
+.hs-top-right .hs-tag {
+    border-color: var(--color-backend);
+    color: var(--color-backend);
+}
+
+/* Bottom: Workflow */
+.hs-bottom {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    justify-content: flex-end;
+    /* Align content to bottom */
+    align-items: center;
+    padding-top: 150px;
+    /* Space for headshot */
+
+    /* Radial Gradient: Transparent at Top-Center */
+    background: radial-gradient(circle at 50% 0%, transparent 20%, rgba(255, 170, 0, 0.2) 80%);
+}
+
+.hs-bottom h3 {
+    color: var(--color-workflow);
+}
+
+.hs-bottom .hs-tags {
+    justify-content: center;
+    max-width: 800px;
+}
+
+.hs-bottom .hs-tag {
+    border-color: var(--color-workflow);
+    color: var(--color-workflow);
+}
+
+
+/* =========================================
+   MOBILE LAYOUT 
+   ========================================= */
+.hs-mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.hs-mobile-header {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+}
+
+.hs-profile-mobile {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding: 5px;
+    background: var(--bg-color);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.hs-profile-mobile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--accent-color);
+}
+
+.hs-mobile-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hs-mobile-section {
+    padding: 2rem 1.5rem;
+    position: relative;
+    margin-bottom: 20px;
+
+    /* Gradient moving downwards */
+    .hs-mobile-section-header {
+        top: -28px;
+        position: absolute;
+    }
+}
+
+/* Front End Mobile */
+.section-frontend.hs-mobile-section {
+    background: linear-gradient(to bottom, transparent, rgba(15, 240, 252, 0.15));
+    border-top: 1px solid rgba(15, 240, 252, 0.3);
+}
+
+.section-frontend.hs-mobile-section h3 {
+    color: var(--color-frontend);
+}
+
+.section-frontend.hs-mobile-section .hs-tag {
+    color: var(--color-frontend);
+    border-color: var(--color-frontend);
+}
+
+/* Back End Mobile */
+.section-backend.hs-mobile-section {
+    background: linear-gradient(to bottom, transparent, rgba(189, 0, 255, 0.15));
+    border-top: 1px solid rgba(189, 0, 255, 0.3);
+}
+
+.section-backend.hs-mobile-section h3 {
+    color: var(--color-backend);
+}
+
+.section-backend.hs-mobile-section .hs-tag {
+    color: var(--color-backend);
+    border-color: var(--color-backend);
+}
+
+/* Workflow Mobile */
+.section-workflow.hs-mobile-section {
+    background: linear-gradient(to bottom, transparent, rgba(255, 170, 0, 0.15));
+    border-top: 1px solid rgba(255, 170, 0, 0.3);
+}
+
+.section-workflow.hs-mobile-section h3 {
+    color: var(--color-workflow);
+}
+
+.section-workflow.hs-mobile-section .hs-tag {
+    color: var(--color-workflow);
+    border-color: var(--color-workflow);
+}
+
+
+/* Responsive Media Queries */
+@media (min-width: 1024px) {
+    .hs-mobile {
+        display: none;
+    }
+
+    .hs-desktop {
+        display: block;
+    }
+}
+
+@media (max-width: 1023px) {
+    .hs-desktop {
+        display: none;
+    }
+
+    .headshot-skills-wrapper {
+        min-height: auto;
+    }
+}
