@@ -9,12 +9,16 @@
   --color-highlight-light: #e0e7ff;
   /* For text highlights */
 
-  /* Dark Theme */
-  --color-bg-dark: #242424;
-  --color-text-dark: rgba(255, 255, 255, 0.87);
-  --color-accent-dark: #747bff;
-  --color-secondary-dark: #1a1a1a;
-  --color-highlight-dark: rgba(116, 123, 255, 0.2);
+  /* Dark Theme - Modern Slate */
+  --color-bg-dark: #0f172a;
+  /* Slate 900 */
+  --color-text-dark: #f8fafc;
+  /* Slate 50 */
+  --color-accent-dark: #38bdf8;
+  /* Sky 400 */
+  --color-secondary-dark: #1e293b;
+  /* Slate 800 */
+  --color-highlight-dark: rgba(56, 189, 248, 0.2);
 
   /* Electric Theme (Crazy Neon) */
   --color-bg-electric: #050505;

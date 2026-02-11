@@ -1,5 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 import './HeadshotSkills.css';
 import profileImage from '../assets/images/Connor-headshot-2.jpg';
 
