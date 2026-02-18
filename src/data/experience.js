@@ -7,16 +7,17 @@ export const WORK_HISTORY = [
         period: 'October 2019 – Present',
         startDate: '2019-10-01',
         description: [
-            "I am currently a Staff Software Engineer, having progressed from a Senior role. In my time here, I've had the opportunity to <span class='highlight-text'>spearhead technical strategies</span> for enterprise-level applications and drive <span class='highlight-text'>cross-team collaborations</span>.",
-            "My journey started with <span class='highlight-text'>developing the bulk of the UI</span> for three greenfield applications, where I led efforts to <span class='highlight-text'>improve unit testing</span> and constructed a robust <span class='highlight-text'>UI component library</span>. As I grew into a leadership role, I acted as a <span class='highlight-text'>subject matter expert</span>, directing the implementation of new features and mentoring junior engineers. I've also standardized <span class='highlight-text'>coding patterns</span> across .NET projects and collaborated on best practices for authentication systems."
+            "As a <span class='highlight-text'>Staff Software Engineer</span>, I have played a key role in the technical evolution of DataScan’s ecosystem, progressing rapidly from a mid-level role by consistently delivering quality architectural solutions. My tenure has spanned the full stack, from leading the UI development of green field applications to establishing an <span class='highlight-text'>Angular component library</span>, from spearheading development on market first software to crafting the beginnings of a centralized internal <span class='highlight-text'>administration platform</span>.",
+            "My journey at DataScan started with the modernization effort of a legacy UI using Angular. During that time I was recognized for my drive to learn and grow as well as my commitment to improving the application I worked on. This led to my <span class='highlight-text'>selection for a key greenfield initiative</span> where I built out the bulk of the UI and supporting C# endpoints, setting the standard for future development. Once this project was established and more team members had joined, I took on another challenge involving customer risk determination and management where I built out pipelines for aggregating data from multiple sources, including apis and <span class='highlight-text'>Kafka event streams</span>, and then used that data to build out a risk determination application to drive real-time business decisions for clients.",
+            "Throughout all my years on all my different teams, the applications may have varied in purpose, but many of my goals remained consistent. First was maintaining user friendly UI's despite complex business logic and user interactions. I was also focused on building <span class='highlight-text'>reusable, sustainable code</span> through rigorous <span class='highlight-text'>unit testing</span>. I made a point to always drive up the unit test coverage of any project I worked on to at least 70%, if not higher. And finally, <span class='highlight-text'>mentoring</span> by sharing my knowledge and expertise with more junior developers and interns through pair programming, code reviews, and group presentations. I'm proud to say I filled the role of a <span class='highlight-text'>subject matter expert</span> on multiple teams and was a go to person for many of my peers."
         ],
         skills: {
             technologies: [
                 'Angular', '.NET', 'MongoDB', 'AWS DocumentDB', 'PostgreSQL',
                 'AWS Lambdas', 'AWS ECS', 'AWS SNS', 'AWS SQS', 'Kafka'
             ],
-            languages: ['C#', 'TypeScript/JavaScript', 'Java'],
-            workflow: ['Git', 'GitKraken', 'GitLab CI', 'JIRA', 'Figma']
+            languages: ['C#', 'TypeScript/JavaScript', 'Terraform', 'Java'],
+            workflow: ['Git', 'GitKraken', 'GitLab CI', 'JIRA', 'Confluence', 'Figma']
         }
     },
     {
