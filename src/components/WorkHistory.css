@@ -35,7 +35,7 @@
 .history-card-container::before {
     content: '';
     position: absolute;
-    left: -10px;
+    left: -13px;
     top: 0;
     width: 16px;
     height: 16px;
