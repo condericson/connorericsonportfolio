@@ -70,5 +70,69 @@ export const WORK_HISTORY = [
             technologies: ['Web Fundamentals'],
             languages: ['JavaScript', 'HTML', 'CSS'],
         }
+    },
+    {
+        id: 'marcus-autism-center',
+        company: 'Marcus Autism Center',
+        location: 'Atlanta, GA',
+        role: 'Clinical Specialist',
+        period: 'August 2013 – March 2017',
+        description: [
+            "Helped children with disabilities develop functional eating behaviors.",
+            "Trained and supervised team members on data management and treatment implementation.",
+            "My background in psychology offers a unique advantage in software development, particularly in understanding user behavior and designing intuitive interfaces. It also enhances my approach to leadership and team collaboration, fostering better communication and empathy within technical teams."
+        ]
     }
 ];
+
+export const ADDITIONAL_PROJECTS = [
+
+    {
+        id: 'trivia-slack-bot',
+        name: 'Trivia Slack Bot',
+        period: 'September 2017 – Present',
+        description: [
+            "Wrote two versions, one as a .NET console application and another as a Node.js server.",
+            "Interfaced with Slack API and posted a daily trivia question that was answered by players and maintained through a MSSQL database.",
+            "Hosted in Azure.",
+            "Currently supports 120+ players"
+        ],
+        techStack: ['.NET', 'Node.js', 'Slack API', 'MSSQL', 'Azure']
+    },
+    {
+        id: 'trahlyta-estates',
+        name: 'Trahlyta Estates HOA Site',
+        period: 'September 2017 – September 2022',
+        description: [
+            "Written in Node.js, with an EJS front end framework, and a MongoDB database structure.",
+            "Supported 40+ residents, providing address book, emergency contact, vendor, and other documentation information."
+        ],
+        techStack: ['Node.js', 'EJS', 'MongoDB']
+    }
+];
+
+export const EDUCATION = [
+    {
+        id: 'thinkful',
+        institution: 'Thinkful',
+        location: 'Atlanta, GA',
+        degree: 'Intensive Full Stack Web Development Course',
+        period: 'May 2017',
+        details: [
+            "Completed intensive, six month course on full stack JavaScript development.",
+            "Learned industry best practices, design patterns, and collaborative workflows by working several hours each week with a senior developer.",
+            "Secured first freelance project with photographer for professional portfolio site."
+        ]
+    },
+    {
+        id: 'gsu',
+        institution: 'Georgia State University',
+        location: 'Atlanta, GA',
+        degree: 'B.S. Psychology',
+        period: 'May 2013',
+        details: [
+            "Magna Cum Laude, International Dean’s List Society, Tau Sigma Honor Society, Alpha Llamba Delta Honor Society, National Merit Scholarship Society, HOPE Scholarship"
+        ]
+    }
+];
+

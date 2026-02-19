@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import HeadshotSkills from './components/HeadshotSkills';
 import AboutMe from './components/AboutMe';
 import WorkHistory from './components/WorkHistory';
+import AdditionalSections from './components/AdditionalSections';
 import RetroScape from './components/RetroScape';
 import Footer from './components/Footer';
 
@@ -37,8 +38,10 @@ function App() {
         <Hero />
         <HeadshotSkills />
         <WorkHistory />
+        <AdditionalSections />
         <AboutMe />
         <Footer />
+
       </main>
     </div >
   );
