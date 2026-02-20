@@ -10,14 +10,17 @@ const Hero = () => {
         const titleList = [
             "User Experiences",
             "Data Pipelines",
-            "Business Solutions",
-            "Secure APIs",
+            "Enterprise Solutions",
+            "APIs",
             "Testable Code",
             "Shared Components",
-            "Authentication Flows",
             "CI/CD Infrastructure",
             "Scalable Architecture",
             "Efficient Teams",
+            "Web Applications",
+            "Cloud Infrastructure",
+            "Microservices",
+            "Event-Driven Architecture"
         ];
 
         // Randomize
@@ -65,8 +68,10 @@ const Hero = () => {
                 <motion.p variants={item} className="subtitle">
                     9+&nbsp;Years&nbsp;Experience • Full&nbsp;Stack&nbsp;Software&nbsp;Engineer • Business&nbsp;Applications&nbsp;Architect
                 </motion.p>
-                <motion.h1 variants={item} className="title">
+                <motion.h1 variants={item} className="i-build">
                     I build{' '}
+                </motion.h1>
+                <motion.h1 variants={item} className="title">
                     <AnimatePresence mode="wait">
                         {titles.length > 0 && (
                             <motion.span
