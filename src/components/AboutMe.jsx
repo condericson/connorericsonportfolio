@@ -66,7 +66,7 @@ const AboutMe = () => {
                 transition={{ delay: 0.5, duration: 1 }}
                 viewport={{ once: true }}
             >
-                <blockquote>"In a world where you can be anything, be kind"</blockquote>
+                <blockquote>"In a world where you can be anything, be kind."</blockquote>
             </motion.div>
         </section>
     );
