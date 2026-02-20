@@ -39,8 +39,14 @@ const AdditionalSections = () => {
                                     ))}
                                 </div>
                                 <div className="project-tech-stack">
-                                    {project.techStack.map(tech => (
-                                        <span key={tech} className="tech-badge">{tech}</span>
+                                    {project.techStack.frontEnd?.length > 0 && project.techStack.frontEnd.map(tech => (
+                                        <span key={tech} className="tech-badge frontend">{tech}</span>
+                                    ))}
+                                    {project.techStack.backEnd?.length > 0 && project.techStack.backEnd.map(tech => (
+                                        <span key={tech} className="tech-badge backend">{tech}</span>
+                                    ))}
+                                    {project.techStack.workflow?.length > 0 && project.techStack.workflow.map(tech => (
+                                        <span key={tech} className="tech-badge workflow">{tech}</span>
                                     ))}
                                 </div>
                             </div>

@@ -12,12 +12,9 @@ export const WORK_HISTORY = [
             "Throughout all my years on all my different teams, the applications may have varied in purpose, but many of my goals remained consistent. First was maintaining user friendly UI's despite complex business logic and user interactions. I was also focused on building <span class='highlight-text'>reusable, sustainable code</span> through rigorous <span class='highlight-text'>unit testing</span>. I made a point to always drive up the unit test coverage of any project I worked on to at least 70%, if not higher. And finally, <span class='highlight-text'>mentoring</span> by sharing my knowledge and expertise with more junior developers and interns through pair programming, code reviews, and group presentations. I'm proud to say I filled the role of a <span class='highlight-text'>subject matter expert</span> on multiple teams and was a go to person for many of my peers."
         ],
         skills: {
-            technologies: [
-                'Angular', '.NET', 'MongoDB', 'AWS DocumentDB', 'PostgreSQL',
-                'AWS Lambdas', 'AWS ECS', 'AWS SNS', 'AWS SQS', 'Kafka'
-            ],
-            languages: ['C#', 'TypeScript/JavaScript', 'Terraform', 'Java'],
-            workflow: ['Git', 'GitKraken', 'GitLab CI', 'JIRA', 'Confluence', 'Figma']
+            frontEnd: ['Angular', 'TypeScript', 'JavaScript'],
+            backEnd: ['.NET', 'C#', 'PostgreSQL', 'AWS DocumentDB/MongoDB', 'AWS Lambdas', 'AWS ECS', 'AWS SQS', 'Kafka', 'Azure', 'Java', 'Terraform'],
+            workflow: ['Git', 'GitKraken', 'GitLab CI', 'Jira', 'Confluence', 'Figma', 'Slack']
         }
     },
     {
@@ -29,13 +26,12 @@ export const WORK_HISTORY = [
         startDate: '2017-08-01',
         endDate: '2019-10-01',
         description: [
-            "At Aaron's, I worked on the <span class='highlight-text'>E-Commerce platform</span> and Customer Account Management applications. My focus was on developing new functionality and interfacing with <span class='highlight-text'>microservices</span> to support high-traffic customer interactions.",
-            "I utilized <span class='highlight-text'>feature flagging</span> to enable frequent production deployments and conducted <span class='highlight-text'>A/B testing</span> to validate hypotheses for website optimization."
+            "At Aaron's, I worked on the <span class='highlight-text'>E-Commerce platform</span> and Customer Account Management applications. After starting as a Junior Developer, I quickly rose to a Intermediate Software Engineer via demonstrating my passion for learning and my focus on user experience. I primarily focused on front end development as this was my passion and filled a void within the team. My focus initially was on expanding the ASP.NET MVC style architecture to support new features and business requirements, but later was focused on a building out the UI following the company's migration to the Salesforce Commerce Cloud platform. Additionally, I utilized <span class='highlight-text'>feature flagging</span> to enable frequent production deployments and conducted <span class='highlight-text'>A/B testing</span> to validate hypotheses for website optimization."
         ],
         skills: {
-            technologies: ['.NET', 'React', 'MSSQL', 'Microservices', 'Salesforce Commerce Cloud'],
-            languages: ['C#', 'JavaScript', 'SQL'],
-            workflow: ['JIRA', 'Git', 'Agile']
+            frontEnd: ['React', 'JavaScript', 'Salesforce Commerce Cloud'],
+            backEnd: ['.NET', 'C#', 'MSSQL', 'Microservices', 'SQL'],
+            workflow: ['Jira', 'Git', 'Agile', 'Slack']
         }
     },
     {
@@ -50,9 +46,9 @@ export const WORK_HISTORY = [
             "My career began with an internship where I built <span class='highlight-text'>cross-platform web applications</span> using <span class='highlight-text'>React Native</span>. This experience provided a strong foundation in industry best practices through close collaboration with senior developers."
         ],
         skills: {
-            technologies: ['React Native', 'Mobile'],
-            languages: ['JavaScript'],
-            workflow: []
+            frontEnd: ['React Native', 'JavaScript'],
+            backEnd: [],
+            workflow: ['Expo']
         }
     },
     {
@@ -67,8 +63,9 @@ export const WORK_HISTORY = [
             "Parallel to my early development work, I <span class='highlight-text'>taught coding workshops</span> covering fundamentals of web development. I prepared presentation materials and trained teaching assistants to deliver effective learning experiences."
         ],
         skills: {
-            technologies: ['Web Fundamentals'],
-            languages: ['JavaScript', 'HTML', 'CSS'],
+            frontEnd: ['HTML', 'CSS', 'JavaScript'],
+            backEnd: [],
+            workflow: ['PowerPoint', 'CodePen.io']
         }
     },
     {
@@ -78,9 +75,7 @@ export const WORK_HISTORY = [
         role: 'Clinical Specialist',
         period: 'August 2013 – March 2017',
         description: [
-            "Helped children with disabilities develop functional eating behaviors.",
-            "Trained and supervised team members on data management and treatment implementation.",
-            "My background in psychology offers a unique advantage in software development, particularly in understanding user behavior and designing intuitive interfaces. It also enhances my approach to leadership and team collaboration, fostering better communication and empathy within technical teams."
+            "As a Clinical Specialist, I helped children with disabilities develop functional eating behaviors and trained team members on data management and treatment implementation. This background in psychology now offers me a <span class='highlight-text'>unique advantage in software development</span>, particularly in understanding user behavior and designing intuitive interfaces. It also enhances my approach to <span class='highlight-text'>leadership and team collaboration</span>, fostering better communication and empathy within technical teams."
         ]
     }
 ];
@@ -97,7 +92,11 @@ export const ADDITIONAL_PROJECTS = [
             "Hosted in Azure.",
             "Currently supports 120+ players"
         ],
-        techStack: ['.NET', 'Node.js', 'Slack API', 'MSSQL', 'Azure']
+        techStack: {
+            frontEnd: [],
+            backEnd: ['.NET', 'Node.js', 'Slack API', 'MSSQL', 'Azure'],
+            workflow: []
+        }
     },
     {
         id: 'trahlyta-estates',
@@ -107,7 +106,11 @@ export const ADDITIONAL_PROJECTS = [
             "Written in Node.js, with an EJS front end framework, and a MongoDB database structure.",
             "Supported 40+ residents, providing address book, emergency contact, vendor, and other documentation information."
         ],
-        techStack: ['Node.js', 'EJS', 'MongoDB']
+        techStack: {
+            frontEnd: ['EJS'],
+            backEnd: ['Node.js', 'MongoDB'],
+            workflow: []
+        }
     }
 ];
 
@@ -121,7 +124,6 @@ export const EDUCATION = [
         details: [
             "Completed intensive, six month course on full stack JavaScript development.",
             "Learned industry best practices, design patterns, and collaborative workflows by working several hours each week with a senior developer.",
-            "Secured first freelance project with photographer for professional portfolio site."
         ]
     },
     {

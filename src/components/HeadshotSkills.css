@@ -8,21 +8,6 @@
 }
 
 /* Colors Variables */
-:root {
-    --color-frontend: #2dd4bf;
-    /* Teal 400 */
-    --color-backend: #a78bfa;
-    /* Violet 400 */
-    /* --color-workflow: #fbbf24; */
-    --color-workflow: rgb(36, 190, 251);
-    /* Amber 400 */
-}
-
-[data-theme="electric"] {
-    --color-frontend: var(--electric-cyan);
-    --color-backend: var(--electric-purple);
-    --color-workflow: var(--electric-pink);
-}
 
 /* =========================================
    DESKTOP LAYOUT 
@@ -195,6 +180,10 @@
     background: radial-gradient(circle at 50% 50%, rgba(36, 190, 251, 0.45), transparent 60%);
 }
 
+[data-theme="electric"] .hs-bottom::before {
+    background: radial-gradient(circle at 50% 50%, rgba(255, 0, 255, 0.45), transparent 60%);
+}
+
 .hs-bottom h3 {
     color: var(--color-workflow);
 }
@@ -293,8 +282,8 @@
 
 /* Workflow Mobile */
 .section-workflow.hs-mobile-section {
-    background: linear-gradient(to top, transparent, rgba(255, 170, 0, 0.15));
-    border-top: 1px solid rgba(255, 170, 0, 0.3);
+    background: linear-gradient(to top, transparent, rgba(36, 190, 251, 0.15));
+    border-top: 1px solid rgba(36, 190, 251, 0.3);
 }
 
 .section-workflow.hs-mobile-section h3 {

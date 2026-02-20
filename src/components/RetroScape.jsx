@@ -38,7 +38,6 @@ const RetroScape = () => {
     // Start "below" fold, move up. 
     // Mobile: Rise slower so it doesn't pop up too early
     const scrollMultiplier = isMobile ? 0.2 : 0.3;
-    const horizonOffset = Math.max(0, 1000 - (scrollY * scrollMultiplier)); // Simple parallax
 
     return (
         <div className="retro-scape-container">
@@ -90,7 +89,7 @@ const RetroScape = () => {
                        If page is long (e.g. 2000px), it moves up 400px.
                        We want it to settle at bottom:0.
                     */
-                    transform: `translateY(${Math.max(0, 1000 - scrollY * scrollMultiplier)}px)`
+                    transform: `translateY(${Math.max(0, 1800 - scrollY * scrollMultiplier)}px)`
                 }}
             >
                 <div className="inset-gradient"></div>

@@ -41,6 +41,14 @@
   --accent-color: var(--color-accent-dark);
   --secondary-bg: var(--color-secondary-dark);
   --highlight-bg: var(--color-highlight-dark);
+
+  /* Skill Category Colors */
+  --color-frontend: #2dd4bf;
+  /* Teal 400 */
+  --color-backend: #a78bfa;
+  /* Violet 400 */
+  --color-workflow: rgb(36, 190, 251);
+  /* Sky blue / Amber 400 replacement */
 }
 
 [data-theme="light"] {
@@ -57,6 +65,10 @@
   --accent-color: var(--color-accent-electric);
   --secondary-bg: var(--color-secondary-electric);
   --highlight-bg: var(--color-highlight-electric);
+
+  --color-frontend: var(--electric-cyan);
+  --color-backend: var(--electric-purple);
+  --color-workflow: var(--electric-pink);
 }
 
 /* Electric Theme Global Overrides */

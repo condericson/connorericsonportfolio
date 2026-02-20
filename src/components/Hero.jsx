@@ -17,7 +17,7 @@ const Hero = () => {
             "Authentication Flows",
             "CI/CD Infrastructure",
             "Scalable Architecture",
-            "Efficient Teams"
+            "Efficient Teams",
         ];
 
         // Randomize
@@ -81,7 +81,7 @@ const Hero = () => {
                     </AnimatePresence>
                 </motion.h1>
                 <motion.p variants={item} className="subtitle">
-                    9+ Years Experience • Full Stack Developer • Creative Problem Solver
+                    9+ Years Experience • Full Stack Software Engineer • Business Applications Architect
                 </motion.p>
 
                 <motion.div variants={item} className="cta-container">

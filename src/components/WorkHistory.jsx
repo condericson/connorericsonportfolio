@@ -72,29 +72,41 @@ const WorkHistory = () => {
                         */}
                         {job.skills && (
                             <div className="skills-container-clean">
-                                <div className="tags-clean">
-                                    {job.skills.technologies?.map(tech => (
-                                        <span key={tech} className="tech-tag-major">{tech}</span>
-                                    ))}
-                                </div>
-                                <div className="secondary-skills">
-                                    {job.skills.languages?.length > 0 && (
-                                        <div className="skill-subgroup">
-                                            <span className="sub-label">Languages:</span>
-                                            {job.skills.languages.map(lang => (
-                                                <span key={lang} className="sub-tag">{lang}</span>
+                                {/* Front End Column */}
+                                {job.skills.frontEnd?.length > 0 && (
+                                    <div className="skill-column">
+                                        <span className="sub-label" style={{ color: 'var(--color-frontend)' }}>Front End</span>
+                                        <div className="skill-list">
+                                            {job.skills.frontEnd.map(skill => (
+                                                <span key={skill} className="tech-tag frontend">{skill}</span>
                                             ))}
                                         </div>
-                                    )}
-                                    {job.skills.workflow?.length > 0 && (
-                                        <div className="skill-subgroup">
-                                            <span className="sub-label">Workflow:</span>
-                                            {job.skills.workflow.map(tool => (
-                                                <span key={tool} className="sub-tag">{tool}</span>
+                                    </div>
+                                )}
+
+                                {/* Back End Column */}
+                                {job.skills.backEnd?.length > 0 && (
+                                    <div className="skill-column">
+                                        <span className="sub-label" style={{ color: 'var(--color-backend)' }}>Back End</span>
+                                        <div className="skill-list">
+                                            {job.skills.backEnd.map(skill => (
+                                                <span key={skill} className="tech-tag backend">{skill}</span>
                                             ))}
                                         </div>
-                                    )}
-                                </div>
+                                    </div>
+                                )}
+
+                                {/* Workflow Column */}
+                                {job.skills.workflow?.length > 0 && (
+                                    <div className="skill-column">
+                                        <span className="sub-label" style={{ color: 'var(--color-workflow)' }}>Workflow</span>
+                                        <div className="skill-list">
+                                            {job.skills.workflow.map(skill => (
+                                                <span key={skill} className="tech-tag workflow">{skill}</span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                         )}
                     </motion.div>
