@@ -8,16 +8,16 @@ const Hero = () => {
 
     React.useEffect(() => {
         const titleList = [
-            // "User Experiences",
-            // "Data Pipelines",
-            // "Business Solutions",
-            // "Secure APIs",
-            // "Testable Code",
-            // "Shared Components",
-            // "Authentication Flows",
-            // "CI/CD Infrastructure",
+            "User Experiences",
+            "Data Pipelines",
+            "Business Solutions",
+            "Secure APIs",
+            "Testable Code",
+            "Shared Components",
+            "Authentication Flows",
+            "CI/CD Infrastructure",
             "Scalable Architecture",
-            // "Efficient Teams",
+            "Efficient Teams",
         ];
 
         // Randomize
@@ -63,7 +63,7 @@ const Hero = () => {
                     Hi, I'm Connor
                 </motion.h2>
                 <motion.p variants={item} className="subtitle">
-                    9+ Years Experience • Full Stack Software Engineer • Business Applications Architect
+                    9+&nbsp;Years&nbsp;Experience • Full&nbsp;Stack&nbsp;Software&nbsp;Engineer • Business&nbsp;Applications&nbsp;Architect
                 </motion.p>
                 <motion.h1 variants={item} className="title">
                     I build{' '}
