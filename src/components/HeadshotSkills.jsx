@@ -73,7 +73,7 @@ const HeadshotSkills = () => {
 
                 <div className="hs-mobile-stack">
                     <div className="hs-mobile-section section-frontend">
-                        <h3 className="hs-mobile-section-header">Front End</h3>
+                        <h2 className="hs-mobile-section-header">Front End</h2>
                         <div className="hs-tags">
                             {skills.frontend.map(s => (
                                 <span key={s} className="hs-tag">{s}</span>
@@ -82,7 +82,7 @@ const HeadshotSkills = () => {
                     </div>
 
                     <div className="hs-mobile-section section-backend">
-                        <h3 className="hs-mobile-section-header">Back End</h3>
+                        <h2 className="hs-mobile-section-header">Back End</h2>
                         <div className="hs-tags">
                             {skills.backend.map(s => (
                                 <span key={s} className="hs-tag">{s}</span>
@@ -91,7 +91,7 @@ const HeadshotSkills = () => {
                     </div>
 
                     <div className="hs-mobile-section section-workflow">
-                        <h3 className="hs-mobile-section-header">Workflow</h3>
+                        <h2 className="hs-mobile-section-header">Workflow</h2>
                         <div className="hs-tags">
                             {skills.workflow.map(s => (
                                 <span key={s} className="hs-tag">{s}</span>

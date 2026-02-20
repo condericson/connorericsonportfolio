@@ -89,5 +89,6 @@
 }
 
 [data-theme="electric"] .section-title {
-    text-shadow: 3px 3px 0px var(--electric-purple);
+    text-shadow: 5px 2px 0px var(--electric-purple), -3px -3px 0px var(--electric-cyan);
+    color: var(--color-text-electric);
 }

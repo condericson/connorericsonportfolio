@@ -134,5 +134,10 @@ button {
 }
 
 [data-theme="electric"] .highlight-text {
-  text-shadow: 0 0 5px var(--accent-color);
+  text-shadow: 0 0 5px var(--electric-cyan);
+}
+
+/* Electric Theme Header Override */
+[data-theme="electric"] .app-header-title {
+  color: var(--color-text-electric);
 }

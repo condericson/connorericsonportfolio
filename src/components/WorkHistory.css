@@ -13,6 +13,12 @@
     padding-bottom: 0.5rem;
 }
 
+[data-theme="electric"] .section-title {
+    color: var(--color-text-electric);
+    text-shadow: 5px 2px 0px var(--electric-purple), -3px -3px 0px var(--electric-cyan);
+    border-bottom-color: var(--electric-pink);
+}
+
 .history-list {
     display: flex;
     flex-direction: column;

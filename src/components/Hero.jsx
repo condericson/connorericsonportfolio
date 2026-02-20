@@ -8,16 +8,16 @@ const Hero = () => {
 
     React.useEffect(() => {
         const titleList = [
-            "User Experiences",
-            "Data Pipelines",
-            "Business Solutions",
-            "Secure APIs",
-            "Testable Code",
-            "Shared Components",
-            "Authentication Flows",
-            "CI/CD Infrastructure",
+            // "User Experiences",
+            // "Data Pipelines",
+            // "Business Solutions",
+            // "Secure APIs",
+            // "Testable Code",
+            // "Shared Components",
+            // "Authentication Flows",
+            // "CI/CD Infrastructure",
             "Scalable Architecture",
-            "Efficient Teams",
+            // "Efficient Teams",
         ];
 
         // Randomize
@@ -62,6 +62,9 @@ const Hero = () => {
                 <motion.h2 variants={item} className="greeting">
                     Hi, I'm Connor
                 </motion.h2>
+                <motion.p variants={item} className="subtitle">
+                    9+ Years Experience • Full Stack Software Engineer • Business Applications Architect
+                </motion.p>
                 <motion.h1 variants={item} className="title">
                     I build{' '}
                     <AnimatePresence mode="wait">
@@ -80,10 +83,6 @@ const Hero = () => {
                         )}
                     </AnimatePresence>
                 </motion.h1>
-                <motion.p variants={item} className="subtitle">
-                    9+ Years Experience • Full Stack Software Engineer • Business Applications Architect
-                </motion.p>
-
                 <motion.div variants={item} className="cta-container">
                     {/* Placeholder for buttons/actions if needed */}
                 </motion.div>
