@@ -12,8 +12,8 @@ export const WORK_HISTORY = [
             "Throughout all my years on all my different teams, the applications may have varied in purpose, but many of my goals remained consistent. First was maintaining user friendly UI's despite complex business logic and user interactions. I was also focused on building <span class='highlight-text'>reusable, sustainable code</span> through rigorous <span class='highlight-text'>unit testing</span>. I made a point to always drive up the unit test coverage of any project I worked on to at least 70%, if not higher. And finally, <span class='highlight-text'>mentoring</span> by sharing my knowledge and expertise with more junior developers and interns through pair programming, code reviews, and group presentations. I'm proud to say I filled the role of a <span class='highlight-text'>subject matter expert</span> on multiple teams and was a go to person for many of my peers.",
         ],
         skills: {
-            frontEnd: ['Angular', 'TypeScript', 'JavaScript'],
-            backEnd: ['.NET', 'C#', 'PostgreSQL', 'AWS DocumentDB/MongoDB', 'AWS Lambdas', 'AWS ECS', 'AWS SQS', 'Kafka', 'Azure', 'Java', 'Terraform'],
+            frontEnd: ['Angular', 'TypeScript', 'JavaScript', 'SCSS'],
+            backEnd: ['.NET', 'C#', 'PostgreSQL', 'AWS DocumentDB/MongoDB', 'Redis', 'AWS Lambdas', 'AWS ECS', 'AWS SQS', 'Kafka', 'Azure', 'Java', 'Terraform'],
             workflow: ['Git', 'GitKraken', 'GitLab CI', 'Jira', 'Confluence', 'Figma', 'Slack']
         }
     },

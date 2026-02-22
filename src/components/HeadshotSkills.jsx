@@ -8,10 +8,10 @@ const HeadshotSkills = () => {
             'Angular', 'TypeScript', 'JavaScript', 'React', 'HTML/CSS', 'SCSS'
         ],
         backend: [
-            '.NET', 'C#', 'Java', 'PostgreSQL', 'MSSQL', 'MongoDB', 'Node.js', 'AWS', 'Kafka', 'Azure'
+            '.NET', 'C#', 'PostgreSQL', 'MSSQL', 'MongoDB', 'Redis', 'Node.js', 'AWS', 'Kafka', 'Azure', 'Terraform'
         ],
         workflow: [
-            'Git', 'Gitlab CI', 'Jira', 'Confluence', 'Figma'
+            'Git', 'Copilot', 'Claude', 'Gitlab CI', 'Jira', 'Confluence', 'Figma'
         ]
     };
 
