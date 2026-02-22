@@ -8,14 +8,15 @@ const Hero = () => {
 
     React.useEffect(() => {
         const primaryTitleList = [
+            "Distributed Systems",
             "User Experiences",
-            "Efficient Teams",
-            "Testable Code",
-            "Event-Driven Architecture",
             "Web Applications",
         ];
 
         const additionalTitleList = [
+            "Event-Driven Architecture",
+            "Testable Code",
+            "Efficient Teams",
             "Data Pipelines",
             "Enterprise Solutions",
             "APIs",
@@ -24,7 +25,6 @@ const Hero = () => {
             "Scalable Architecture",
             "Cloud Infrastructure",
             "Microservices",
-            "Distributed Systems",
             "Ikea Furniture",
             "Blanket Forts",
             "Magic Decks",
