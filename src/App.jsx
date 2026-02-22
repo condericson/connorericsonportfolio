@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Github } from 'lucide-react';
+import { GitHubIcon, LinkedInIcon } from './components/BrandIcons';
 import ThemeToggle from './components/ThemeToggle';
 import Hero from './components/Hero';
 import HeadshotSkills from './components/HeadshotSkills';
@@ -33,26 +33,44 @@ function App() {
           >
             condericson@gmail.com
           </a>
-          <a
-            href="https://github.com/condericson"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.5rem',
-              fontSize: '0.9rem',
-              color: 'var(--text-color)',
-              opacity: 0.8,
-              textDecoration: 'none',
-              marginTop: '0.25rem'
-            }}
-            onMouseEnter={(e) => { e.currentTarget.style.opacity = '1'; e.currentTarget.style.color = 'var(--accent-color)'; }}
-            onMouseLeave={(e) => { e.currentTarget.style.opacity = '0.8'; e.currentTarget.style.color = 'var(--text-color)'; }}
-          >
-            <Github size={16} />
-            <span>condericson</span>
-          </a>
+          <div style={{ display: 'flex', gap: '1rem', marginTop: '0.25rem' }}>
+            <a
+              href="https://github.com/condericson"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                color: 'var(--text-color)',
+                opacity: 0.8,
+                textDecoration: 'none',
+                transition: 'all 0.2s ease'
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.opacity = '1'; e.currentTarget.style.color = 'var(--accent-color)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.opacity = '0.8'; e.currentTarget.style.color = 'var(--text-color)'; }}
+            >
+              <GitHubIcon size={20} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/connor-ericson-17507b12b/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                color: 'var(--text-color)',
+                opacity: 0.8,
+                textDecoration: 'none',
+                transition: 'all 0.2s ease'
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.opacity = '1'; e.currentTarget.style.color = 'var(--accent-color)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.opacity = '0.8'; e.currentTarget.style.color = 'var(--text-color)'; }}
+            >
+              <LinkedInIcon size={20} />
+            </a>
+          </div>
         </div>
         <ThemeToggle currentTheme={theme} onThemeChange={setTheme} />
       </header>

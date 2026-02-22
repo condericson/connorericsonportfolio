@@ -7,28 +7,42 @@ const Hero = () => {
     const [titles, setTitles] = React.useState([]);
 
     React.useEffect(() => {
-        const titleList = [
+        const primaryTitleList = [
             "User Experiences",
+            "Efficient Teams",
+            "Testable Code",
+            "Event-Driven Architecture",
+            "Web Applications",
+        ];
+
+        const additionalTitleList = [
             "Data Pipelines",
             "Enterprise Solutions",
             "APIs",
-            "Testable Code",
             "Shared Components",
             "CI/CD Infrastructure",
             "Scalable Architecture",
-            "Efficient Teams",
-            "Web Applications",
             "Cloud Infrastructure",
             "Microservices",
-            "Event-Driven Architecture"
+            "Distributed Systems",
+            "Ikea Furniture",
+            "Blanket Forts",
+            "Magic Decks",
+            "Dad Jokes",
+            "Lego Sets",
+            "Sandcastles"
         ];
 
         // Randomize
-        for (let i = titleList.length - 1; i > 0; i--) {
+        for (let i = primaryTitleList.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
-            [titleList[i], titleList[j]] = [titleList[j], titleList[i]];
+            [primaryTitleList[i], primaryTitleList[j]] = [primaryTitleList[j], primaryTitleList[i]];
         }
-        setTitles(titleList);
+        for (let i = additionalTitleList.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [additionalTitleList[i], additionalTitleList[j]] = [additionalTitleList[j], additionalTitleList[i]];
+        }
+        setTitles(primaryTitleList.concat(additionalTitleList));
     }, []);
 
     React.useEffect(() => {
@@ -66,7 +80,7 @@ const Hero = () => {
                     Hi, I'm Connor
                 </motion.h2>
                 <motion.p variants={item} className="subtitle">
-                    9+&nbsp;Years&nbsp;Experience • Full&nbsp;Stack&nbsp;Software&nbsp;Engineer • Business&nbsp;Applications&nbsp;Architect
+                    9+&nbsp;Years&nbsp;Experience • Full&nbsp;Stack&nbsp;Software&nbsp;Engineer • User&nbsp;Advocate
                 </motion.p>
                 <motion.h1 variants={item} className="i-build">
                     I build{' '}

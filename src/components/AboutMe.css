@@ -60,6 +60,7 @@
     color: var(--text-color);
     margin: 0;
     font-family: serif;
+    text-shadow: 1px 1px 6px black;
 }
 
 /* Electric Theme Overrides */

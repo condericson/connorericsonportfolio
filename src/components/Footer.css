@@ -1,11 +1,13 @@
 .portfolio-footer {
-    height: 1000px;
+    height: 65vh;
     /* Large height to allow background to be seen */
     display: flex;
     justify-content: center;
     align-items: center;
     /* Content at top */
-    padding-top: 4rem;
+    padding-top: 2rem;
+    box-sizing: border-box;
+    padding-bottom: 4rem;
     position: relative;
     z-index: 1;
     /* Above fixed background */

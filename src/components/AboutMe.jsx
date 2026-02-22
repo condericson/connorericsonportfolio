@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { ABOUT_ME } from '../data/experience';
 import './AboutMe.css';
 
 const AboutMe = () => {
@@ -28,35 +29,12 @@ const AboutMe = () => {
                 whileInView="show"
                 viewport={{ once: true, margin: "-100px" }}
             >
-                {/* Drive Section */}
-                <motion.div className="about-card drive-card" variants={item}>
-                    <h3>Why I Code</h3>
-                    <p>
-                        My desire to code comes from a desire to <span className="highlight-text">help and serve others</span>.
-                        I strive to build intuitive online experiences that make users feel like using my application is the
-                        easiest and most enjoyable part of their day. <span className="highlight-text">Solving business problems while bringing joy</span> to users through software development
-                        is my ultimate goal.
-                    </p>
-                </motion.div>
-
-                {/* Family Section */}
-                <motion.div className="about-card family-card" variants={item}>
-                    <h3>My Family</h3>
-                    <p>
-                        <span className="highlight-text">My family is my greatest adventure.</span> My beautiful wife and I are an incredible team, and we have two wonderful children that we love to spoil.
-                        They are the light of my life and motivate me to make a
-                        positive impact on the world around me every day.
-                    </p>
-                </motion.div>
-
-                {/* Hobbies Section */}
-                <motion.div className="about-card hobbies-card" variants={item}>
-                    <h3>Hobbies</h3>
-                    <p>
-                        When I'm not coding, I love exploring the outdoors, off-roading, or getting into an exciting game of Magic: The Gathering.
-                        You can also find me gaming on my Steam Deck, but my favorite pastime has to be <span className="highlight-text">discovering the world</span> through the eyes of my kids.
-                    </p>
-                </motion.div>
+                {ABOUT_ME.cards.map((card) => (
+                    <motion.div key={card.id} className={`about-card ${card.className}`} variants={item}>
+                        <h3>{card.title}</h3>
+                        <p dangerouslySetInnerHTML={{ __html: card.description }} />
+                    </motion.div>
+                ))}
             </motion.div>
 
             <motion.div
@@ -66,7 +44,7 @@ const AboutMe = () => {
                 transition={{ delay: 0.5, duration: 1 }}
                 viewport={{ once: true }}
             >
-                <blockquote>"In a world where you can be anything, be kind."</blockquote>
+                <blockquote>{ABOUT_ME.quote}</blockquote>
             </motion.div>
         </section>
     );
