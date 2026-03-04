@@ -133,7 +133,7 @@ export const EDUCATION = [
         degree: 'B.S. Psychology',
         period: 'May 2013',
         details: [
-            "Magna Cum Laude, International Dean’s List Society, Tau Sigma Honor Society, Alpha Llamba Delta Honor Society, National Merit Scholarship Society, HOPE Scholarship"
+            "Magna Cum Laude, International Dean’s List Society, Tau Sigma Honor Society, Alpha Lambda Delta Honor Society, National Merit Scholarship Society, HOPE Scholarship"
         ]
     }
 ];
